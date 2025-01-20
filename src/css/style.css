@@ -192,13 +192,14 @@ p {
   justify-content: right;
   align-items: center;
 
-  width: 50%;
+  /* width: 50%; */
 }
 
 .map-section__flag img {
   margin-right: 5%;
   max-width: 50%;
   max-height: 50%;
+  right: 5px;
   position: absolute;
 }
 
@@ -333,9 +334,11 @@ p {
   align-items: center;
   height: 100%;
 }
+
 .margin-md {
   margin: 16px;
 }
+
 .married-image {
   border: #191923 solid 1px;
   display: flex;
@@ -406,6 +409,7 @@ p {
   /* Zet de SVG in de linkerhoek */
   /* padding-bottom: 8px; */
 }
+
 .location-section__rectangle__svg-corner--bottom {
   position: absolute;
   bottom: -4px;
@@ -465,6 +469,7 @@ p {
   position: absolute;
   bottom: 8px;
 }
+
 .location-section__frame__background {
   /* z-index: 0; */
   position: absolute;
@@ -497,8 +502,8 @@ p {
 
 .location-section__son {
   background-color: #191923;
-    color: #FFF6E7;
-    text-align: center;
+  color: #FFF6E7;
+  text-align: center;
 }
 
 .location-section__rectangle__svg {
@@ -550,6 +555,171 @@ p {
   margin-bottom: 16px;
 }
 
+.location-section__raid {
+  display: flex;
+  /* Gebruik flexbox voor het uitlijnen van elementen */
+  flex-direction: column;
+  align-items: end;
+  /* Centreer verticaal */
+  justify-content: space-between;
+  /* Plaats tekst links en afbeelding rechts */
+  gap: 1rem;
+  /* Ruimte tussen tekst en afbeelding */
+}
+
+.location-section__raid img {
+  width: 50%;
+  /* Stel de breedte van de afbeelding in */
+  max-width: 200px;
+  /* Optioneel: maximale breedte */
+}
+
+.cleared {
+  font-weight: bold;
+  font-size: 6rem;
+  text-align: center;
+  font-family: alexandria, sans-serif;
+  margin-top: 32px;
+}
+
+.location-section__parismap {
+  padding: 0 !important;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.location-section__parismap img {
+  width: 100vw;
+  height: auto;
+  display: block;
+}
+
+.map-section__parismap__border {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  top: 8px;
+  border: 2px solid #FFF6E7;
+  pointer-events: none;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.jobs {
+  color: #ECDBC3;
+  font-weight: bold;
+  text-align: center;
+  font-size: 3.5rem;
+}
+
+.location-section__printer {
+  display: flex;
+  /* Maak een flexcontainer */
+  justify-content: center;
+  flex-direction: column;
+  /* Centreer horizontaal */
+  align-items: center;
+}
+
+.location-section__printer__rectangle {
+  position: relative;
+  padding: 0 !important;
+  margin: 16px;
+  width: fit-content;
+  height: fit-content;
+  /* Zorg ervoor dat de container de juiste afmetingen heeft voor de inhoud en SVG's */
+}
+
+.location-section__printer__rectangle {
+  position: relative;
+  padding: 0 !important;
+  margin: 16px 16px 0 16px;
+  width: fit-content;
+  height: fit-content;
+  /* Zorg ervoor dat de container de juiste afmetingen heeft voor de inhoud en SVG's */
+}
+
+.location-section__printer__rectangle__svg {
+  position: relative;
+  margin-bottom: 16px;
+  width: fit-content;
+  /* top: 0;
+  /* De SVG-container neemt de volledige ruimte in van de bovenkant van de container */
+}
+
+.mb-lg {
+  margin-bottom: 32px;
+}
+
+.location-section__printer__rectangle__svg-corner {
+  position: absolute;
+  /* Positioneer de SVG absoluut ten opzichte van de container */
+  top: -4px;
+  /* Zet de SVG in de bovenste hoek */
+  left: 0;
+  /* Zet de SVG in de linkerhoek */
+  /* padding-bottom: 8px; */
+}
+
+.location-section__printer__rectangle__svg-corner--bottom {
+  position: absolute;
+  bottom: -4px;
+  /* Zet de tweede SVG 0px van de onderkant */
+  right: 0;
+  /* Zet de tweede SVG in de rechterhoek */
+}
+
+.location-section__printer__rectangle__name {
+  border: #191923 solid 1px;
+  text-align: center;
+  width: fit-content;
+  padding: 16px;
+  margin-left: 4px;
+  margin-right: 4px;
+  /* margin-bottom: 8px; */
+  /* margin-top: 8px; */
+}
+
+.location-section__printer__rectangle__img {
+  border: #191923 solid 1px;
+  text-align: center;
+  /* width: fit-content; */
+  padding: 16px;
+  margin-left: 4px;
+  margin-right: 4px;
+  /* width: 50%; */
+}
+
+.location-section__printer__rectangle__img img {
+  max-width: 330px;
+  min-width: 220px;
+  width: 100%;
+}
+
+.location-section__printer__rectangle__name h2 {
+  font-size: 6rem;
+  /* transform: rotate(90deg); */
+  transform: rotateY(180deg);
+
+}
+
+.location-section__printer__button-container {
+  display: flex;
+  justify-content: flex-start;
+  /* Dit zorgt ervoor dat de knop naar links uitgelijnd wordt */
+  width: 100%; 
+  margin-bottom: 64px;
+}
+
+.mb-sm {
+  margin-bottom: 8px;
+}
 
 @media (prefers-color-scheme: light) {
   :root {
