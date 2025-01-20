@@ -1,0 +1,576 @@
+:root {
+  font-family: 'Times New Roman', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #191923;
+  background-color: #FFF6E7;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  /* margin: 16px; */
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button {
+  /* z-index: ; */
+  margin-top: 8px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.4em 0.8em;
+  font-size: 1.25em;
+  font-weight: bold;
+  font-family: inherit;
+  background-color: #B20D30;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+nav {
+  margin-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  place-items: center;
+  text-align: center;
+  gap: 2rem;
+  /* width: 100%; */
+}
+
+h1 {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  line-height: 1.1;
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 1.25rem;
+  /* padding-top: 8px; */
+  padding-bottom: 8px;
+  line-height: 120%;
+}
+
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.highlight {
+  color: #B20D30;
+}
+
+.nav__span {
+  width: 68px;
+}
+
+.logo {
+  height: 4em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.header {
+  margin: 16px;
+}
+
+.header__container {
+  position: relative;
+  border: 1px solid black;
+  border-top-left-radius: 320px;
+  border-top-right-radius: 320px;
+  padding: 8px;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.header__image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.header__image--top {
+  border-top-left-radius: 320px;
+  border-top-right-radius: 320px;
+  object-position: top;
+  height: 240px;
+}
+
+.header__image--bottom {
+  object-position: bottom;
+  height: 135px;
+}
+
+.header__text {
+  text-align: center;
+}
+
+.map-section {
+  position: relative;
+  width: 100%;
+  height: auto;
+  /* min-height: 40vh; */
+  /* margin-bottom: 16px ; */
+}
+
+.map-section__rippedPaper {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  /* margin-left: -16px; */
+  /* margin-bottom: -16px; */
+  width: 100vw;
+  height: auto;
+  /* display: block; */
+}
+
+
+.map-section__europe {
+  /* position: absolute; */
+  /* bottom: 0; */
+  /* margin-left: -16px; */
+  /* margin-bottom: -16px; /*als ik op een locatie klik moet dit uit*/
+  /* margin-bottom: 0px; als ik op een locatie klik moet dit uit */
+  width: 100vw;
+  height: auto;
+  display: block;
+}
+
+
+.map-section__border {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  border: 2px solid #FFF6E7;
+  pointer-events: none;
+}
+
+.map-section__flag {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  bottom: 24px;
+
+  display: flex;
+  justify-content: right;
+  align-items: center;
+
+  width: 50%;
+}
+
+.map-section__flag img {
+  margin-right: 5%;
+  max-width: 50%;
+  max-height: 50%;
+  position: absolute;
+}
+
+.location-section>div {
+  padding: 16px;
+}
+
+.dark-background {
+  background-color: #191923;
+  color: #FFF6E7;
+}
+
+.dark-background h2 {
+
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+.location-nav {
+  /* display: flex; */
+  /* padding: 16px; */
+  /* color: #FFF6E7; */
+
+  /* width: 100%; */
+  /* Zorg ervoor dat de div de volledige breedte van de oudercontainer gebruikt */
+  /* height: 100vh; */
+  /* Optioneel, om de hoogte ook in te stellen (als je dat wilt) */
+  /* box-sizing: border-box; */
+  /* padding-top: 16px; */
+  text-transform: uppercase;
+  font-weight: bold;
+  /* Zorgt ervoor dat padding en borders bij de afmetingen worden inbegrepen */
+}
+
+.location-nav svg {
+  position: sticky;
+  border: 2px solid #FFF6E7;
+  width: 20px;
+  height: 20px;
+  padding: 8px;
+}
+
+.location-nav span {
+  width: 40px;
+}
+
+.location-section__container {
+  margin-top: 32px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: end;
+  gap: 16px;
+  /* justify-content: center; */
+}
+
+.location-section__container img {
+  width: 50%;
+}
+
+.location-section__container p {
+  width: 150px;
+}
+
+.location-section__jeanne-content {
+  display: flex;
+  margin-top: 16px;
+  padding: 0 !important;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* .jeanne-image {
+  margin-top: 16px;
+  margin-left: -24%;
+  text-align: center;
+  width: fit-content;
+
+} */
+.jeanne-image {
+  /* margin-left: -40%; */
+  margin-top: 16px;
+  /* left: 0; */
+  /* margin-left: 0; */
+  /* Zet marges standaard op 0 om te zorgen voor een responsieve opmaak */
+  /* text-align: center; */
+  width: 100%;
+  /* Zorg ervoor dat de container 100% breed is van de beschikbare ruimte */
+  max-width: 300px;
+  /* Zet een maximale breedte voor grotere schermen */
+}
+
+.location-section__jeanne {
+  padding: 0 !important;
+}
+
+.jeanne-name {
+  font-size: 2.5rem;
+  text-align: center;
+  position: absolute;
+  left: 29%;
+  transform: translate(0%, -100%);
+}
+
+.location-section__jeanne h2 {
+  padding-left: 16px;
+  margin-top: 16px;
+}
+
+.location-section__jeanne-married {
+  display: flex;
+  align-items: stretch;
+  /* gap: 1rem; */
+  transform: rotate(90deg);
+  transform-origin: center;
+  /* margin-right: 16px; */
+  align-content: start;
+  /* margin-left: -15%; */
+}
+
+.married-info {
+  border: #191923 solid 1px;
+  padding: 8px;
+  text-transform: uppercase;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 300;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.margin-md {
+  margin: 16px;
+}
+.married-image {
+  border: #191923 solid 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin-left: -1px;
+}
+
+.married-image img {
+  width: 60px;
+  height: auto;
+  padding: 8px;
+}
+
+.font-alexandria {
+  font-family: alexandria, sans-serif;
+}
+
+.text-sm {
+  font-size: 0.7rem;
+  text-transform: none;
+  /* Voor consistentie */
+}
+
+.location-section__jeanne-family-info {
+  margin-left: 16px;
+  margin-top: 16px;
+
+}
+
+/* .location-section__rectangle__person {
+  border: #191923 solid 1px;
+  text-align: center;
+  width: fit-content;
+  padding: 8px;
+}
+
+.location-section__rectangle--extra-border {
+  width: fit-content;
+  border: #191923 solid 1px;
+  padding: 8px;
+} */
+
+.location-section__rectangle {
+  position: relative;
+  padding: 0 !important;
+  margin: 16px;
+  width: fit-content;
+  height: fit-content;
+  /* Zorg ervoor dat de container de juiste afmetingen heeft voor de inhoud en SVG's */
+}
+
+.location-section__rectangle__svg {
+  position: relative;
+  margin-bottom: 16px;
+  width: fit-content;
+  /* top: 0;
+  /* De SVG-container neemt de volledige ruimte in van de bovenkant van de container */
+}
+
+.location-section__rectangle__svg-corner {
+  position: absolute;
+  /* Positioneer de SVG absoluut ten opzichte van de container */
+  top: -4px;
+  /* Zet de SVG in de bovenste hoek */
+  left: 0;
+  /* Zet de SVG in de linkerhoek */
+  /* padding-bottom: 8px; */
+}
+.location-section__rectangle__svg-corner--bottom {
+  position: absolute;
+  bottom: -4px;
+  /* Zet de tweede SVG 0px van de onderkant */
+  right: 0;
+  /* Zet de tweede SVG in de rechterhoek */
+}
+
+.location-section__rectangle__name {
+  border: #191923 solid 1px;
+  text-align: center;
+  width: fit-content;
+  padding: 8px;
+  margin-left: 4px;
+  margin-right: 4px;
+  /* margin-bottom: 8px; */
+  /* margin-top: 8px; */
+}
+
+.location-section__frame {
+  /* justify-content: center; */
+  /* display: flex;
+  flex-direction: column; */
+  /* justify-content: center; */
+  align-items: center;
+
+  /* text-align: start; */
+  position: relative;
+
+}
+
+.location-section__frame__image {
+  position: relative;
+  display: flex;
+  align-content: center;
+  /* flex-direction: column; */
+  justify-content: center;
+  /* align-items: center; */
+  border-top-left-radius: 320px;
+  border-top-right-radius: 320px;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.location-section__frame__image img {
+  padding: 8px;
+  border: #191923 solid 1px;
+  border-top-left-radius: 320px;
+  border-top-right-radius: 320px;
+  min-width: 150px;
+  width: 50%;
+}
+
+.location-section__frame__image h2 {
+  text-align: center;
+  color: #FFF6E7;
+  position: absolute;
+  bottom: 8px;
+}
+.location-section__frame__background {
+  /* z-index: 0; */
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  /* Centreer horizontaal en verticaal */
+  text-align: center;
+  color: #ECDBC3;
+  line-height: 120%;
+  font-size: 7rem;
+}
+
+.text-white {
+  color: #FFF6E7;
+}
+
+.location-section__cross {
+  padding: 0 !important;
+  width: 100vw;
+  overflow: hidden;
+  margin-top: 16px;
+}
+
+.location-section__cross img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.location-section__son {
+  background-color: #191923;
+    color: #FFF6E7;
+    text-align: center;
+}
+
+.location-section__rectangle__svg {
+  position: relative;
+  margin-bottom: 16px;
+  width: fit-content;
+  /* top: 0;
+  /* De SVG-container neemt de volledige ruimte in van de bovenkant van de container */
+}
+
+.location-section__rectangle__svg-corner {
+  position: absolute;
+  /* Positioneer de SVG absoluut ten opzichte van de container */
+  top: -4px;
+  /* Zet de SVG in de bovenste hoek */
+  left: 0;
+  /* Zet de SVG in de linkerhoek */
+  /* padding-bottom: 8px; */
+}
+
+.location-section__rectangle__svg-corner--bottom {
+  position: absolute;
+  bottom: -4px;
+  /* Zet de tweede SVG 0px van de onderkant */
+  right: 0;
+  /* Zet de tweede SVG in de rechterhoek */
+}
+
+.location-section__rectangle__name {
+  border: #191923 solid 1px;
+  text-align: center;
+  width: fit-content;
+  padding: 8px;
+  margin-left: 4px;
+  margin-right: 4px;
+  /* margin-bottom: 8px; */
+  /* margin-top: 8px; */
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.padding-md {
+  padding: 16px;
+}
+
+.mb-md {
+  margin-bottom: 16px;
+}
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+
+  a:hover {
+    color: #747bff;
+  }
+
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.vanilla:hover {
+  filter: drop-shadow(0 0 2em #f7df1eaa);
+}

@@ -5,13 +5,265 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite App</title>
+  <title>Plantin's Travel History</title>
+  <link rel="stylesheet" href="/src/css/reset.css">
+  <link rel="stylesheet" href="/src/css/style.css">
+  <link rel="stylesheet" href="https://use.typekit.net/pxt4ljc.css">
+  <script src="/main.js"></script>
+  <!-- Development version -->
+  <!-- <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script> -->
+
+  <!-- Production version -->
+  <!-- <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script> -->
 </head>
 
 <body>
-  <div id="app"></div>
-  <script type="module" src="/src/main.js"></script>
-  <h1>hallo world</h1>
+  <nav>
+    <img class="logo" src="/assets/logoMuseum.png" alt="Museum logo">
+    <h1>Plantin's <br> travel history</h1>
+    <span class="nav--span"></span>
+  </nav>
+  <header class="header">
+    <div class="header__container">
+      <img class="header__image header__image--top" src="/assets/plantijnChr.jpg" alt="">
+      <p class="header__text text-center">
+        He was born around <span class="highlight">1520</span> and started his own printing works. In his career
+        he
+        <span class="highlight">travelled</span> a lot and if you want to know where and what he did,
+        <span class="highlight">scroll</span> to continue.
+      </p>
+      <img class="header__image header__image--bottom" src="/assets/plantijnChr.jpg" alt="">
+    </div>
+    <div>
+      <h2 class="highlight">Christophe Plantin</h2>
+      <p>
+        He was a <span class="highlight">master printer</span> who founded one of the most important print houses in
+        Antwerp. His <span class="highlight">Plantin-Moretus House</span>, now a
+        UNESCO World Heritage Site, showcases the <span class="highlight">world’s oldest printing presses</span>, rare
+        manuscripts, and beautifully preserved
+        interiors.
+        It’s a must-see for history and book lovers alike.
+      </p>
+      <button>Buy a ticket</button>
+    </div>
+  </header>
+  <section class="map-section">
+    <img src="/assets/rippedPaper.png" alt="" class="map-section__rippedPaper">
+    <span class="map-section__border"></span>
+    <div class="map-section__flag">
+      <img src="/assets/logoPasser.png" alt="">
+      <svg width="84" height="52" viewBox="0 0 84 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M25.0004 0H84.2295V51.2655H50.0008H25.0004H8.58307e-06L25.0004 25.8816V25.3839L8.58307e-06 1.90735e-06L25.0004 0Z"
+          fill="#FFF6E7" />
+      </svg>
+    </div>
+    <img src="/assets/europe.png" alt="Map" class="map-section__europe">
+  </section>
+  <!-- CAEN -->
+  <section class="location-section">
+    <div class="dark-background">
+      <nav class="location-nav">
+        <span></span>
+        <h2 class="text-white">Caen</h2>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="lucide lucide-arrow-up">
+          <path d="m5 12 7-7 7 7" />
+          <path d="M12 19V5" />
+        </svg>
+      </nav>
+      <div class="location-section__container">
+        <p>Plantin <span class="highlight">learned</span> bookbinding and printing from...</p>
+        <img src="/assets/book2.png" alt="">
+      </div>
+      <h2>Robert II macé</h2>
+    </div>
+    <div class="location-section__jeanne">
+      <h2>In <span class="highlight">Caen</span> he met...</h2>
+      <div class="location-section__jeanne-content">
+        <div class="jeanne-image">
+          <img src="/assets/jeanne2.png" alt="Jeanne">
+          <p class="jeanne-name highlight">Jeanne <br> Rivière</p>
+        </div>
+        <div class="location-section__jeanne-married">
+          <div class="married-info font-alexandria">
+            <span>Married</span>
+            <span class="text-sm">in</span>
+            <span>1545</span>
+          </div>
+          <div class="married-image">
+            <img src="/assets/ringen.png" alt="Ringen">
+          </div>
+        </div>
+      </div>
+      <p class="location-section__jeanne-family-info">Together they had <span class="highlight">six daughters</span>
+        (5 of them reached adulthood) and <span class="highlight">one son</span>.</p>
+    </div>
+    <div class="location-section__rectangle">
+      <div class="location-section__rectangle__svg">
+        <div class="location-section__rectangle__name">
+          <h2>Margaretha <br> Plantin</h2>
+        </div>
+        <!-- Eerste SVG - linker bovenhoek -->
+        <svg class="location-section__rectangle__svg-corner" width="97" height="53" viewBox="0 0 97 53" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <line x1="0.5" y1="2.18557e-08" x2="0.499998" y2="52.9859" stroke="#191923" />
+          <line x1="96.2998" y1="0.5" x2="7.58568e-06" y2="0.499992" stroke="#191923" />
+        </svg>
+
+        <!-- Tweede SVG - rechter onderhoek -->
+        <svg class="location-section__rectangle__svg-corner--bottom" width="56" height="73" viewBox="0 0 56 73"
+          fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line y1="-0.5" x2="71.9095" y2="-0.5" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 55 72.4492)"
+            stroke="#191923" />
+          <line x1="0.332031" y1="71.9492" x2="55" y2="71.9492" stroke="#191923" />
+        </svg>
+
+      </div>
+      <h2 class="highlight">1547-1594</h2>
+      <p>Married Frans Raphelengius. She managed the <span class="highlight">bookstore</span> while Frans worked in
+        Plantin's print shop as <span class="highlight">proofreader</span>. After
+        the siege of Antwerp, they moved to Leiden, where Frans took over the northern branch of the printing house and
+        became a
+        professor. Margareta played an important role in the <span class="highlight">family work</span> and their
+        success.</p>
+    </div>
+    <div class="location-section__frame">
+      <p class="location-section__frame__background">Martina <br> Plantin</p>
+      <div class="location-section__frame__image">
+        <img src="/assets/MartinaPlantin.jpg" alt="">
+        <h2>Martina <br> Plantin</h2>
+      </div>
+      <h2 class="highlight">1547-1594</h2>
+      <p>She was the second daughter and a pivotal figure in printing history. As the wife of Jan I <span
+          class="highlight">Moretus</span>, she became
+        the
+        matriarch of a renowned printing dynasty. Her sons, <span class="highlight">Balthasar I and Jan II</span>,
+        carried on the family business,
+        transforming
+        the printing house into a lasting <span class="highlight">success</span>.</p>
+    </div>
+    <div class="location-section__rectangle">
+      <div class="location-section__rectangle__svg">
+        <div class="location-section__rectangle__name">
+          <h2>Catharina <br> Plantin</h2>
+        </div>
+        <!-- Eerste SVG - linker bovenhoek -->
+        <svg class="location-section__rectangle__svg-corner" width="97" height="53" viewBox="0 0 97 53" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <line x1="0.5" y1="2.18557e-08" x2="0.499998" y2="52.9859" stroke="#191923" />
+          <line x1="96.2998" y1="0.5" x2="7.58568e-06" y2="0.499992" stroke="#191923" />
+        </svg>
+
+        <!-- Tweede SVG - rechter onderhoek -->
+        <svg class="location-section__rectangle__svg-corner--bottom" width="56" height="73" viewBox="0 0 56 73"
+          fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line y1="-0.5" x2="71.9095" y2="-0.5" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 55 72.4492)"
+            stroke="#191923" />
+          <line x1="0.332031" y1="71.9492" x2="55" y2="71.9492" stroke="#191923" />
+        </svg>
+
+      </div>
+      <h2 class="highlight">1553-1622</h2>
+      <p>She traded lace and married Parisian merchant Jean Gassen in June 1571. After his death, she returned to
+        <span class="highlight">Antwerp</span> and wed
+        Hans Arents (alias Spierinck) in November 1575. She had eight children, one with Gassen.
+      </p>
+    </div>
+    <div class="location-section__frame">
+      <p class="location-section__frame__background" style="
+  font-size: 5rem; top: 32px;">Magdalena <br> Plantin</p>
+      <div class="location-section__frame__image">
+        <img src="/assets/MagdalenaPlantin.jpg" alt="">
+        <h2 style="
+  font-size: 2rem;">Magdalena <br> Plantin</h2>
+      </div>
+      <h2 class="highlight">1557-1599</h2>
+    </div>
+    <div class="location-section__rectangle">
+      <div class="location-section__rectangle__svg">
+        <div class="location-section__rectangle__name">
+          <h2>Henrica <br> Plantin</h2>
+        </div>
+        <!-- Eerste SVG - linker bovenhoek -->
+        <svg class="location-section__rectangle__svg-corner" width="97" height="53" viewBox="0 0 97 53" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <line x1="0.5" y1="2.18557e-08" x2="0.499998" y2="52.9859" stroke="#191923" />
+          <line x1="96.2998" y1="0.5" x2="7.58568e-06" y2="0.499992" stroke="#191923" />
+        </svg>
+
+        <!-- Tweede SVG - rechter onderhoek -->
+        <svg class="location-section__rectangle__svg-corner--bottom" width="56" height="73" viewBox="0 0 56 73"
+          fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line y1="-0.5" x2="71.9095" y2="-0.5" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 55 72.4492)"
+            stroke="#191923" />
+          <line x1="0.332031" y1="71.9492" x2="55" y2="71.9492" stroke="#191923" />
+        </svg>
+
+      </div>
+      <h2 class="highlight">1561-1640</h2>
+    </div>
+    <div class="location-section__cross">
+      <img src="/assets/cross.png" alt="">
+    </div>
+    <div class="location-section__son">
+      <p>Their <span class="highlight">only</span> son, Christoffel, born in 1566, died in infancy before 1570</p>
+
+    </div>
+
+  </section>
+  <section class="location-section">
+    <nav class="location-nav margin-md">
+      <span></span>
+      <h2>Paris</h2>
+      <svg style="border: 2px solid #191923;" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round" class="lucide lucide-arrow-up">
+        <path d="m5 12 7-7 7 7" />
+        <path d="M12 19V5" />
+      </svg>
+    </nav>
+    <div>
+      <p class="mb-md">The second half of the <span class="highlight">16th century</span> was a challenging period for writers and printer-publishers. Religious
+        intolerance
+        was widespread, and in the Southern Netherlands, under Spanish control, everyone was<span class="highlight">required to follow</span> the
+        official
+        faith. Going against this official religion was <span class="highlight">risky</span> and could lead to <span class="highlight">serious consequences</span>, which was...</p>
+        <div class="location-section__rectangle__svg">
+          <div class="location-section__rectangle__name">
+            <h2 class="text-bold padding-md">Roman Catholicism</h2>
+          </div>
+          <!-- Eerste SVG - linker bovenhoek -->
+          <svg class="location-section__rectangle__svg-corner" width="97" height="53" viewBox="0 0 97 53" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <line x1="0.5" y1="2.18557e-08" x2="0.499998" y2="52.9859" stroke="#191923" />
+            <line x1="96.2998" y1="0.5" x2="7.58568e-06" y2="0.499992" stroke="#191923" />
+          </svg>
+        
+          <!-- Tweede SVG - rechter onderhoek -->
+          <svg class="location-section__rectangle__svg-corner--bottom" width="56" height="73" viewBox="0 0 56 73" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <line y1="-0.5" x2="71.9095" y2="-0.5" transform="matrix(4.37114e-08 -1 -1 -4.37114e-08 55 72.4492)"
+              stroke="#191923" />
+            <line x1="0.332031" y1="71.9492" x2="55" y2="71.9492" stroke="#191923" />
+          </svg>
+        
+        </div>
+    </div>
+    <div>
+      
+    </div>
+  </section>
+
+
 </body>
+<!-- <div id="app"></div> -->
+<!-- <script type="module" src="/src/main.js"></script> -->
+
+<!-- <h1>hallo world</h1> -->
 
 </html>
