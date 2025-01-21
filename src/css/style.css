@@ -25,8 +25,9 @@ a:hover {
 
 body {
   /* margin: 16px; */
-  min-width: 320px;
+  min-width: 360px;
   min-height: 100vh;
+  /* max-width: 100vh; */
 }
 
 button {
@@ -94,12 +95,12 @@ p {
   color: #B20D30;
 }
 
-.nav__span {
-  width: 68px;
+.nav--span {
+  width: 101px;
 }
 
 .logo {
-  height: 4em;
+  height: 6em;
   will-change: filter;
   transition: filter 300ms;
 }
@@ -109,6 +110,8 @@ p {
 }
 
 .header__container {
+  /* display: block !important;
+  flex-direction: column; */
   position: relative;
   border: 1px solid black;
   border-top-left-radius: 320px;
@@ -116,23 +119,51 @@ p {
   padding: 8px;
   overflow: hidden;
   margin-bottom: 16px;
+  /* max-width: 640px; */
+  max-width: 520px;
+  /* display: block; */
+  /* height: ; */
+  width: 250px;
 }
 
 .header__image {
   width: 100%;
   object-fit: cover;
+  /* max-width: 320px; */
+  max-width: 640px;
+}
+
+@media (min-width: 480px) {
+  .header__image--top {
+    height: 35vh !important;
+  }
+
+  .header__image--bottom {
+    height: 20vh !important;
+  }
 }
 
 .header__image--top {
   border-top-left-radius: 320px;
   border-top-right-radius: 320px;
+  object-fit: cover;
+  /* Zorg ervoor dat de afbeelding proportioneel blijft */
   object-position: top;
-  height: 240px;
+  height: 25vh;
+  /* Hoogte als percentage van de viewport */
+  max-height: 500px;
+  max-width: 520px;
+  /* Beperk de maximale hoogte */
 }
 
 .header__image--bottom {
+  /* min-width: 300px; */
+  max-width: 520px;
+  object-fit: cover;
+  /* Proportioneel aanpassen */
   object-position: bottom;
-  height: 135px;
+  height: 15vh;
+  /* Hoogte als percentage van de viewport */
 }
 
 .header__text {
@@ -428,6 +459,9 @@ p {
   /* margin-bottom: 8px; */
   /* margin-top: 8px; */
 }
+.location-section__rectangle__name h2 {
+  font-size: 2.5rem;
+}
 
 .location-section__frame {
   /* justify-content: center; */
@@ -480,7 +514,7 @@ p {
   text-align: center;
   color: #ECDBC3;
   line-height: 120%;
-  font-size: 7rem;
+  font-size: 5rem;
 }
 
 .text-white {
@@ -576,7 +610,7 @@ p {
 
 .cleared {
   font-weight: bold;
-  font-size: 6rem;
+  font-size: 5rem;
   text-align: center;
   font-family: alexandria, sans-serif;
   margin-top: 32px;
@@ -615,7 +649,7 @@ p {
   color: #ECDBC3;
   font-weight: bold;
   text-align: center;
-  font-size: 3.5rem;
+  font-size: 2rem;
 }
 
 .location-section__printer {
@@ -703,7 +737,7 @@ p {
 }
 
 .location-section__printer__rectangle__name h2 {
-  font-size: 6rem;
+  font-size: 4.5rem;
   /* transform: rotate(90deg); */
   transform: rotateY(180deg);
 
@@ -713,7 +747,7 @@ p {
   display: flex;
   justify-content: flex-start;
   /* Dit zorgt ervoor dat de knop naar links uitgelijnd wordt */
-  width: 100%; 
+  width: 100%;
   margin-bottom: 64px;
 }
 
@@ -721,26 +755,51 @@ p {
   margin-bottom: 8px;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+
+@media (min-width: 768px) {
+
+  /* body {
+    font-size: 18px;
+    margin: 20px;
+  } */
+  .header {
+    display: flex;
+    gap: 32px;
   }
 
-  a:hover {
-    color: #747bff;
+  .header__container {
+    width: 400px;
   }
 
-  button {
-    background-color: #f9f9f9;
+  .header__intro p {
+    margin-top: 160px;
+    max-width: 550px;
+    min-width: 300px;
+    /* width: 45%; */
   }
-}
 
+  .header__intro h2 {
+    position: absolute;
+    text-align: center;
+    line-height: 100%;
+    font-size: 4rem;
+    width: 100%;
+    left: 18%;
+  }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
+  .header__image--top {
+    height: 30vh !important;
+    width: 100%;
+  }
 
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
+  .header__image--bottom {
+    height: 12vh !important;
+    width: 100%;
+    /* height: 20vh !important; */
+  }
+
+  .header__container {
+    width: 100%;
+
+  }
 }
