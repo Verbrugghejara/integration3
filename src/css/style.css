@@ -775,6 +775,9 @@ p {
   align-items: center;
 }
 
+.gif-container {
+  display: none;
+}
 
 .location-section__printer__rectangle {
   position: relative;
@@ -1243,13 +1246,6 @@ p {
     text-align: left !important;
   }
 
-  .location-section__workshop__data {
-    display: block;
-  }
-}
-
-.location-section__workshop__data {
-  display: none;
 }
 
 @media (min-width: 1024px) {
@@ -1317,8 +1313,8 @@ p {
   }
 
   .location-nav svg {
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
     padding: 8px;
   }
 
@@ -1399,17 +1395,17 @@ p {
   }
 
   .test {
-    height: 150vh;
+    height: 100vh;
     /* width: 100vw; */
     background-color: #191923;
     position: relative;
   }
 
   .white {
-    position: absolute;
+    position: fixed;
     right: 50%;
     left: 50%;
-    top: 20vh;
+    top: 50vh;
     transform: translate(-50%, -50%);
     height: 0vh;
     width: 0vw;
@@ -1467,6 +1463,7 @@ p {
     /* left: 20vh; */
     opacity: 0;
   }
+
   #magdalena .location-section__frame__fixed {
     top: 5vh !important;
   }
@@ -1475,6 +1472,202 @@ p {
     text-align: center;
   }
 
+  .religion-name {
+    /* display: none; */
+  }
+
+  .gif-container {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .gif-image {
+    width: 900px;
+    /* Zorg ervoor dat de afbeelding de juiste grootte heeft */
+    height: 400px;
+  }
+
+  /* .background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .text-mask {
+    font-size: 10vw;
+    font-weight: bold;
+    color: black;
+    -webkit-mask-image: text;
+  }
+
+  .masked-text {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  } */
+
+  .cleared {
+    /* font-size: 66px; */
+    /* line-height: 80px; */
+    font-weight: 800;
+    text-transform: uppercase;
+    background: url("/assets/dirty.png") 0 0 / auto no-repeat;
+
+    /* background-position-x: left; */
+    background-color: #B20D30;
+    color: #de466c;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* opacity: 0.5; */
+  }
+
+  .location-section__workshop {
+    height: 160vh;
+    display: block;
+    /* justify-content: start; */
+    /* align-items: start; */
+    /* position: relative; */
+  }
+
+  .location-section__workshop__info {
+    display: none;
+  }
+
+  .location-section__workshop__presses {
+    color: #ECDBC3;
+    position: relative;
+    width: 50vh;
+  }
+
+  .location-section__workshop__presses img {
+    width: 10vh;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(0);
+    /* transition: transform 0.3s ease-in-out; */
+  }
+
+  .location-section__workshop__printers {
+    /* align-items: end;
+    align-content: end; */
+    /* display: flex; */
+    /* text-align: end; */
+    float: right;
+    margin-right: 30vh;
+    color: #ECDBC3;
+    position: relative;
+    width: 60vh;
+    margin-top: -30vh;
+  }
+
+  .location-section__workshop__printers img {
+    width: 3vh;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(0);
+    /* transition: transform 0.3s ease-in-out; */
+  }
+
+  .location-section__workshop__printers ul {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    /* Maak 8 gelijke kolommen */
+    gap: 20px;
+    /* Ruimte tussen de items */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .location-section__workshop__compositors {
+    /* align-items: end;
+    align-content: end; */
+    /* display: flex; */
+    /* text-align: end; */
+    /* float: right; */
+    margin-right: 30vh;
+    color: #ECDBC3;
+    position: relative;
+    width: 70vh;
+    margin-top: 30vh;
+  }
+
+  .location-section__workshop__compositors img {
+    width: 3vh;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(0);
+    /* transition: transform 0.3s ease-in-out; */
+  }
+
+  .location-section__workshop__compositors ul {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    /* Maak 8 gelijke kolommen */
+    gap: 20px;
+    /* Ruimte tussen de items */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .location-section__workshop__proofreaders {
+    /* align-items: end;
+    align-content: end; */
+    /* display: flex; */
+    /* text-align: end; */
+    float: right;
+    margin-right: 5vh;
+    color: #ECDBC3;
+    position: relative;
+    width: 60vh;
+    margin-top: -10vh;
+  }
+
+  .location-section__workshop__proofreaders img {
+    width: 3vh;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(0);
+    /* transition: transform 0.3s ease-in-out; */
+  }
+
+  .location-section__workshop__proofreaders ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 16px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 16px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
 }
 
 @media (min-width: 1920px) {
