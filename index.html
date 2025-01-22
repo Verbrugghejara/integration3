@@ -9,8 +9,7 @@
   <link rel="stylesheet" href="/src/css/reset.css">
   <link rel="stylesheet" href="/src/css/style.css">
   <link rel="stylesheet" href="https://use.typekit.net/pxt4ljc.css">
-  <script src="/main.js"></script>
-  <!-- Development version -->
+
   <!-- <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script> -->
 
   <!-- Production version -->
@@ -20,7 +19,9 @@
   </script> -->
 </head>
 
-<body>
+<body class="body">
+
+
   <nav>
     <img class="logo" src="/assets/logoMuseum.png" alt="Museum logo">
     <h1>Plantin's <br> travel history</h1>
@@ -97,8 +98,13 @@
         </div>
         <p>Plantin <span class="highlight">learned</span> bookbinding and printing from...</p>
       </div>
+      <div class="location-section__robert">
 
-      <h2>Robert II macé</h2>
+        <h2>Robert II macé</h2>
+      </div>
+    </div>
+    <div class="test">
+      <div class="white"></div>
     </div>
     <div class="location-section__jeanne">
       <h2>In <span class="highlight">Caen</span> he met...</h2>
@@ -111,7 +117,7 @@
         <div class="location-section__jeanne-married">
           <div class="married-info font-alexandria">
             <span>Married</span>
-            <span class="text-sm">in</span>
+            <span class="married-info-sm">in</span>
             <span>1545</span>
           </div>
           <div class="married-image">
@@ -122,8 +128,8 @@
       <p class="location-section__jeanne-family-info">Together they had <span class="highlight">six daughters</span>
         (5 of them reached adulthood) and <span class="highlight">one son</span>.</p>
     </div>
-    <div class="location-section__rectangle">
-      <div class="location-section__rectangle__svg">
+    <div id="margareta" class="location-section__rectangle">
+      <div class="location-section__rectangle__svg location-section__rectangle__fixed">
         <div class="location-section__rectangle__name">
           <h2>Margaretha <br> Plantin</h2>
         </div>
@@ -155,12 +161,12 @@
 
       </div>
     </div>
-    <div class="location-section__frame">
+    <div id="martina" class="location-section__frame">
       <p class="location-section__frame__background">Martina <br> Plantin</p>
-      <div class="location-section__frame__image">
+      <div class="location-section__frame__image location-section__frame__fixed">
         <img class="location-section__frame__image__img" src="/assets/MartinaPlantin.jpg" alt="">
         <img class="location-section__frame__image__img-groot" src="/assets/MartinaPlantinGroot.png" alt="">
-        <h2 class="location-section__frame__martina">Martina <br> Plantin</h2>
+        <h2 class="location-section__frame__name-martina">Martina <br> Plantin</h2>
       </div>
       <div class="location-section__rectangle__info">
         <h2 class="mb-sm highlight">1550-1616</h2>
@@ -173,8 +179,8 @@
           the printing house into a lasting <span class="highlight">success</span>.</p>
       </div>
     </div>
-    <div class="location-section__rectangle">
-      <div class="location-section__rectangle__svg">
+    <div id="catharina" class="location-section__rectangle">
+      <div class="location-section__rectangle__svg location-section__rectangle__fixed">
         <div class="location-section__rectangle__name">
           <h2>Catharina <br> Plantin</h2>
         </div>
@@ -203,10 +209,10 @@
 
       </div>
     </div>
-    <div class="location-section__frame mb-xl">
+    <div id="magdalena" class="location-section__frame mb-xl">
       <p class="location-section__frame__background" style="
   font-size: 3.5rem; top: 32px;">Magdalena <br> Plantin</p>
-      <div class="location-section__frame__image">
+      <div class="location-section__frame__image location-section__frame__fixed">
         <img class="location-section__frame__image__img" src="/assets/MagdalenaPlantin.jpg" alt="">
         <img class="location-section__frame__image__img-groot" src="/assets/MagdalenaPlantinGroot.png" alt="">
 
@@ -215,8 +221,8 @@
       </div>
       <h2 class="highlight">1557-1599</h2>
     </div>
-    <div class="location-section__rectangle mb-xl">
-      <div class="location-section__rectangle__svg">
+    <div id="henrica" class="location-section__rectangle mb-xl">
+      <div class="location-section__rectangle__svg location-section__rectangle__fixed">
         <div class="location-section__rectangle__name px-lg">
           <h2 class="">Henrica <br> Plantin</h2>
         </div>
@@ -497,7 +503,9 @@
       </p>
     </div>
   </section>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="src/js/script.js"></script>
 
 </body>
 <!-- <div id="app"></div> -->
