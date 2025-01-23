@@ -269,7 +269,7 @@ p {
   /* height: 100%; */
 }
 
-.location-section>div {
+.container {
   padding: 16px;
 }
 
@@ -613,7 +613,7 @@ p {
   padding: 0 !important;
   width: 100vw;
   overflow: hidden;
-  margin-top: 16px;
+  margin: 0 !important;
 }
 
 .location-section__cross img {
@@ -640,7 +640,7 @@ p {
 .location-section__rectangle {
   position: relative;
   padding: 0 !important;
-  margin: 16px;
+  /* margin: 16px; */
   width: fit-content;
   height: fit-content;
   align-items: center;
@@ -1060,8 +1060,8 @@ p {
     font-size: 4rem !important;
   }
 
-  .location-section>div {
-    padding: 32px;
+  .container {
+    padding: 32px !important;
   }
 
 
@@ -1156,8 +1156,8 @@ p {
   .location-section__rectangle {
     display: flex;
     gap: 32px;
-    margin-left: 32px;
-    margin-right: 32px;
+    /* margin-left: 32px;
+    margin-right: 32px; */
     /* width: 100%; */
   }
 
@@ -1200,10 +1200,8 @@ p {
   }
 
   .location-section__frame {
-    padding: 0 !important;
     display: flex;
     gap: 32px;
-    margin-right: 32px;
   }
 
   .location-section__frame__name-martina {
@@ -1332,8 +1330,9 @@ p {
 
   }
 
-  .location-section>div {
-    padding: 48px;
+  .container {
+    padding-left: 48px !important;
+    padding-right: 48px !important;
   }
 
   .location-nav svg {
@@ -1443,8 +1442,8 @@ p {
     justify-content: flex-end;
     width: auto;
 
-    margin-left: 48px;
-    margin-right: 48px;
+    /* margin-left: 48px;
+    margin-right: 48px; */
   }
 
   /* align-items: end; */
@@ -1452,7 +1451,7 @@ p {
 
   .location-section__rectangle__info {
     display: flex;
-    justify-content: end;
+    justify-content: end !important;
     /* text-align: end; */
   }
 
@@ -1692,7 +1691,7 @@ p {
 }
 
 @media (min-width: 1280px) {
-  /* .location-section>div {
+  /* .container {
     padding: 48px;
   } */
 
@@ -1700,6 +1699,10 @@ p {
     justify-content: center;
     gap: 54px;
 
+  }
+
+  .header__container {
+    height: 65vh;
   }
 
   .header__intro h2:nth-child(2) {
@@ -1755,15 +1758,10 @@ p {
     font-size: 3.5rem !important;
   }
 
-  .location-section__rectangle {
 
-    margin-left: 80px;
-    margin-right: 80px;
-  }
-
-  .location-section>div {
-    padding-left: 80px;
-    padding-right: 80px;
+  .container {
+    padding-left: 80px !important;
+    padding-right: 80px !important;
   }
 
   .jobs {
@@ -1816,12 +1814,13 @@ p {
 }
 
 @media (min-width: 1440px) {
-  .header__container {
-    height: 65vh !important;
-  }
 
   .header {
     gap: 80px;
+  }
+
+  .header__text {
+    font-size: 1.25rem
   }
 
   .header__intro h2:nth-child(2) {
@@ -1839,7 +1838,7 @@ p {
   }
 
   .dark-background {
-    height: 110vh;
+    height: 120vh;
   }
 
   .location-section__jeanne-married {
@@ -1880,9 +1879,48 @@ p {
     width: 60vh;
     margin-top: -10vh;
   }
+
   .location-section__workshop {
-        height: 140vh;
+    height: 140vh;
   }
+
+  .location-section__jeanne {
+    margin-top: 80px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .location-section__jeanne-married {
+    top: 62vh;
+  }
+
+  .container {
+    padding-left: 112px !important;
+    padding-right: 112px !important;
+  }
+
+  /* .location-section__rectangle__info p {
+    max-width: 40vw !important;
+  } */
+  .jeanne-frame {
+    margin-left: -112px !important;
+  }
+
+  .jeanne-name {
+    margin-left: -112px !important;
+  }
+
+  .location-section__robert h2 {
+    /* display: none; */
+
+    font-size: 10rem !important;
+  }
+
+
+  .dark-background {
+    height: 130vh;
+  }
+
 }
 
 @media (min-width: 1920px) {}

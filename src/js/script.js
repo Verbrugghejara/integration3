@@ -12,14 +12,14 @@ const init = () => {
       .timeline({
         scrollTrigger: {
           trigger: ".header__container", // Het element dat de animatie activeert
-          // markers: { fontSize: "25px", fontWeight: "bold" }, // Visualiseer de start- en eindmarkers
+          markers: { fontSize: "25px", fontWeight: "bold" }, // Visualiseer de start- en eindmarkers
           start: "top 9%", // Wanneer de bovenkant van het element het midden van de viewport raakt
-          end: "top 1%", // Wanneer de onderkant van het element het midden van de viewport raakt
+          end: "top -10vh", // Wanneer de onderkant van het element het midden van de viewport raakt
           scrub: true, // Synchroniseer animatie met scrollen
         },
       })
       .to(".header__container", {
-        height: "81vh", // Verander de hoogte van de header__container bij scrollen
+        height: "80vh", // Verander de hoogte van de header__container bij scrollen
         ease: "circ",
       });
 
@@ -245,7 +245,7 @@ const init = () => {
       scrollTrigger: {
         trigger: ".location-section__cleared", // Het element dat de animatie activeert
         // markers: { fontSize: "25px", fontWeight: "bold" }, // Visualiseer de start- en eindmarkers
-        start: "top 30%", // Wanneer de bovenkant van het element het midden van de viewport raakt
+        start: "top 25%", // Wanneer de bovenkant van het element het midden van de viewport raakt
         end: "bottom 40%", // Wanneer de onderkant van het element het midden van de viewport raakt
         scrub: true, // Synchroniseer animatie met scrollen
       },
