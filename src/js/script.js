@@ -5,14 +5,12 @@ const init = () => {
   if (mediaQuery.matches) {
     // Registreer de plugin
     gsap.registerPlugin(ScrollTrigger);
-    console.log(gsap);
-    console.log(ScrollTrigger);
 
     gsap
       .timeline({
         scrollTrigger: {
           trigger: ".header__container", // Het element dat de animatie activeert
-          markers: { fontSize: "25px", fontWeight: "bold" }, // Visualiseer de start- en eindmarkers
+          // markers: { fontSize: "25px", fontWeight: "bold" }, // Visualiseer de start- en eindmarkers
           start: "top 9%", // Wanneer de bovenkant van het element het midden van de viewport raakt
           end: "top -10vh", // Wanneer de onderkant van het element het midden van de viewport raakt
           scrub: true, // Synchroniseer animatie met scrollen
@@ -43,12 +41,12 @@ const init = () => {
           trigger: ".location-section__book", // Het element dat de animatie activeert
           // markers: { fontSize: "25px", fontWeight: "bold" }, // Visualiseer de start- en eindmarkers
           start: "bottom 0%", // Wanneer de bovenkant van het element het midden van de viewport raakt
-          end: "bottom -80%", // Wanneer de onderkant van het element het midden van de viewport raakt
+          end: "bottom -300%", // Wanneer de onderkant van het element het midden van de viewport raakt
           scrub: true, // Synchroniseer animatie met scrollen
         },
       })
       .to(".white", {
-        height: "120vh", // Verander de hoogte van de header__container bij scrollen
+        height: "101vh", // Verander de hoogte van de header__container bij scrollen
         width: "100vw", // Verander de hoogte van de header__container bij scrollen
         // top: "120vh", // Verander de hoogte van de header__container bij scrollen
         //   left: "0", // Verander de hoogte van de header__container bij scrollen
@@ -71,7 +69,7 @@ const init = () => {
             trigger: `#${id}`, // Het element dat de animatie activeert, gebaseerd op het id
             // markers: { fontSize: "25px", fontWeight: "bold" }, // Visualiseer de start- en eindmarkers
             start: "top 30%", // Wanneer de bovenkant van het element het midden van de viewport raakt
-            end: "bottom 50%", // Wanneer de onderkant van het element het midden van de viewport raakt
+            end: "bottom 40%", // Wanneer de onderkant van het element het midden van de viewport raakt
             scrub: true, // Synchroniseer animatie met scrollen
           },
         })
@@ -96,7 +94,7 @@ const init = () => {
             trigger: `#${id}`, // Het element dat de animatie activeert
             //   markers: { fontSize: "25px", fontWeight: "bold" }, // Visualiseer de start- en eindmarkers
             start: "top 30%", // Wanneer de bovenkant van het element het midden van de viewport raakt
-            end: "bottom 50%", // Wanneer de onderkant van het element het midden van de viewport raakt
+            end: "bottom 40%", // Wanneer de onderkant van het element het midden van de viewport raakt
             scrub: true, // Synchroniseer animatie met scrollen
           },
         })
@@ -245,15 +243,15 @@ const init = () => {
       scrollTrigger: {
         trigger: ".location-section__cleared", // Het element dat de animatie activeert
         // markers: { fontSize: "25px", fontWeight: "bold" }, // Visualiseer de start- en eindmarkers
-        start: "top 25%", // Wanneer de bovenkant van het element het midden van de viewport raakt
-        end: "bottom 40%", // Wanneer de onderkant van het element het midden van de viewport raakt
+        start: "top 30%", // Wanneer de bovenkant van het element het midden van de viewport raakt
+        end: "bottom 30%", // Wanneer de onderkant van het element het midden van de viewport raakt
         scrub: true, // Synchroniseer animatie met scrollen
       },
     })
     .to(`.cleared`, {
       // backgroundSize: "200%", // Vergroot de achtergrond om deze te laten "verdwijnen"
       backgroundPosition: "150vh 0%", // Verschuif de achtergrond naar beneden
-      ease: "power1.out",
+      ease: "none",
     });
   gsap
     .timeline({
