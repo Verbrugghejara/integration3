@@ -28,8 +28,8 @@ const init = () => {
         scrollTrigger: {
           trigger: ".location-section__book", // Het element dat de animatie activeert
           // markers: { fontSize: "25px", fontWeight: "bold" }, // Visualiseer de start- en eindmarkers
-          start: "top 15%", // Wanneer de bovenkant van het element het midden van de viewport raakt
-          end: "top 0%", // Wanneer de onderkant van het element het midden van de viewport raakt
+          start: "top 25%", // Wanneer de bovenkant van het element het midden van de viewport raakt
+          end: "top 10%", // Wanneer de onderkant van het element het midden van de viewport raakt
           scrub: true, // Synchroniseer animatie met scrollen
         },
       })
@@ -41,7 +41,7 @@ const init = () => {
       .timeline({
         scrollTrigger: {
           trigger: ".location-section__book", // Het element dat de animatie activeert
-          //   markers: { fontSize: "25px", fontWeight: "bold" }, // Visualiseer de start- en eindmarkers
+          // markers: { fontSize: "25px", fontWeight: "bold" }, // Visualiseer de start- en eindmarkers
           start: "bottom 0%", // Wanneer de bovenkant van het element het midden van de viewport raakt
           end: "bottom -80%", // Wanneer de onderkant van het element het midden van de viewport raakt
           scrub: true, // Synchroniseer animatie met scrollen
@@ -252,7 +252,7 @@ const init = () => {
     })
     .to(`.cleared`, {
       // backgroundSize: "200%", // Vergroot de achtergrond om deze te laten "verdwijnen"
-      backgroundPosition: "-310% 0%", // Verschuif de achtergrond naar beneden
+      backgroundPosition: "150vh 0%", // Verschuif de achtergrond naar beneden
       ease: "power1.out",
     });
   gsap

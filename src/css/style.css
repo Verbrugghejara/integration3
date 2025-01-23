@@ -905,6 +905,10 @@ p {
   /* Maakt scrollen soepel */
 }
 
+.location-section__workshop__data {
+  display: none;
+}
+
 @media (min-width: 768px) {
   .only-desktop {
     display: block;
@@ -1272,6 +1276,10 @@ p {
 
   }
 
+  .location-section__workshop__data {
+    display: block;
+  }
+
   .header__image {
     position: absolute;
     /* Absolute voor animatie */
@@ -1459,7 +1467,7 @@ p {
     /* height: 100vh; */
     top: 50vh;
     bottom: -20vh !important;
-    left: 20vh;
+    left: 10vh;
     opacity: 0;
   }
 
@@ -1804,6 +1812,76 @@ p {
     width: 50%;
     stroke-width: 8px !important;
     /* Zet de tweede SVG in de rechterhoek */
+  }
+}
+
+@media (min-width: 1440px) {
+  .header__container {
+    height: 65vh !important;
+  }
+
+  .header {
+    gap: 80px;
+  }
+
+  .header__intro h2:nth-child(2) {
+    left: 2vh;
+    top: 18vh;
+  }
+
+  .location-section__container {
+    gap: 80px;
+    margin-top: 72px;
+  }
+
+  .location-section__book {
+    max-width: 450px;
+  }
+
+  .dark-background {
+    height: 110vh;
+  }
+
+  .location-section__jeanne-married {
+    right: 23vh !important;
+    top: 55vh;
+  }
+
+  .married-info {
+    font-size: 6rem;
+  }
+
+  .jeanne-image-md {
+    /* width: 400px; */
+    width: 60vh;
+  }
+
+  .location-section__jeanne-family-info {
+    margin-left: 80px;
+    /* align-items: center; */
+    margin-bottom: 0;
+    margin-top: 48px;
+  }
+
+  .jeanne-name {
+    margin-left: 0 !important;
+    font-size: 6rem;
+  }
+
+  .location-section__workshop__printers {
+    margin-right: 20vh;
+  }
+
+  .location-section__workshop__proofreaders {
+    float: right;
+    margin-right: -5vh;
+    color: #ECDBC3;
+    position: relative;
+    width: 60vh;
+    margin-top: -10vh;
+  }
+  .location-section__workshop {
+        height: 140vh;
   }
 }
 
