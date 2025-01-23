@@ -12,7 +12,7 @@ const init = () => {
       .timeline({
         scrollTrigger: {
           trigger: ".header__container", // Het element dat de animatie activeert
-          //   markers: { fontSize: "25px", fontWeight: "bold" }, // Visualiseer de start- en eindmarkers
+          // markers: { fontSize: "25px", fontWeight: "bold" }, // Visualiseer de start- en eindmarkers
           start: "top 9%", // Wanneer de bovenkant van het element het midden van de viewport raakt
           end: "top 1%", // Wanneer de onderkant van het element het midden van de viewport raakt
           scrub: true, // Synchroniseer animatie met scrollen
@@ -117,37 +117,7 @@ const init = () => {
     // Roep de functie aan voor het element #margareta (of een ander ID)
     applyScrollAnimationImages("martina");
     applyScrollAnimationImages("magdalena");
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: ".location-section__cleared", // Het element dat de animatie activeert
-          //   markers: { fontSize: "25px", fontWeight: "bold" }, // Visualiseer de start- en eindmarkers
-          start: "top 30%", // Wanneer de bovenkant van het element het midden van de viewport raakt
-          end: "bottom 40%", // Wanneer de onderkant van het element het midden van de viewport raakt
-          scrub: true, // Synchroniseer animatie met scrollen
-        },
-      })
-      .to(`.cleared`, {
-        // backgroundSize: "200%", // Vergroot de achtergrond om deze te laten "verdwijnen"
-        backgroundPosition: "-150% 0%", // Verschuif de achtergrond naar beneden
-        ease: "power1.out",
-      });
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: ".location-section__printer__rectangle", // Het element dat de animatie activeert
-          //   markers: { fontSize: "25px", fontWeight: "bold" }, // Visualiseer de start- en eindmarkers
-          start: "top 50%", // Wanneer de bovenkant van het element het midden van de viewport raakt
-          end: "bottom 30%", // Wanneer de onderkant van het element het midden van de viewport raakt
-          scrub: true, // Synchroniseer animatie met scrollen
-        },
-      })
-      .to(`.location-section__printer__rectangle__name h2`, {
-        transform: "rotateY(0)",
-        // backgroundSize: "200%", // Vergroot de achtergrond om deze te laten "verdwijnen"
-        // backgroundPosition: "-150% 0%", // Verschuif de achtergrond naar beneden
-        ease: "none",
-      });
+
     gsap
       .timeline({
         scrollTrigger: {
@@ -194,7 +164,7 @@ const init = () => {
       .timeline({
         scrollTrigger: {
           trigger: ".location-section__workshop__compositors", // Het element dat de animatie activeert
-        //   markers: { fontSize: "25px", fontWeight: "bold" }, // Visualiseer de start- en eindmarkers
+          //   markers: { fontSize: "25px", fontWeight: "bold" }, // Visualiseer de start- en eindmarkers
           start: "top 70%", // Wanneer de bovenkant van het element het midden van de viewport raakt
           end: "bottom 60%", // Wanneer de onderkant van het element het midden van de viewport raakt
           scrub: true, // Synchroniseer animatie met scrollen
@@ -215,7 +185,7 @@ const init = () => {
       .timeline({
         scrollTrigger: {
           trigger: ".location-section__workshop__proofreaders", // Het element dat de animatie activeert
-        //   markers: { fontSize: "25px", fontWeight: "bold" }, // Visualiseer de start- en eindmarkers
+          //   markers: { fontSize: "25px", fontWeight: "bold" }, // Visualiseer de start- en eindmarkers
           start: "top 70%", // Wanneer de bovenkant van het element het midden van de viewport raakt
           end: "bottom 60%", // Wanneer de onderkant van het element het midden van de viewport raakt
           scrub: true, // Synchroniseer animatie met scrollen
@@ -270,5 +240,36 @@ const init = () => {
     //   ease: "none",
     // });
   }
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: ".location-section__cleared", // Het element dat de animatie activeert
+        // markers: { fontSize: "25px", fontWeight: "bold" }, // Visualiseer de start- en eindmarkers
+        start: "top 30%", // Wanneer de bovenkant van het element het midden van de viewport raakt
+        end: "bottom 40%", // Wanneer de onderkant van het element het midden van de viewport raakt
+        scrub: true, // Synchroniseer animatie met scrollen
+      },
+    })
+    .to(`.cleared`, {
+      // backgroundSize: "200%", // Vergroot de achtergrond om deze te laten "verdwijnen"
+      backgroundPosition: "-310% 0%", // Verschuif de achtergrond naar beneden
+      ease: "power1.out",
+    });
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: ".location-section__printer__rectangle", // Het element dat de animatie activeert
+        //   markers: { fontSize: "25px", fontWeight: "bold" }, // Visualiseer de start- en eindmarkers
+        start: "top 50%", // Wanneer de bovenkant van het element het midden van de viewport raakt
+        end: "bottom 30%", // Wanneer de onderkant van het element het midden van de viewport raakt
+        scrub: true, // Synchroniseer animatie met scrollen
+      },
+    })
+    .to(`.location-section__printer__rectangle__name h2`, {
+      transform: "rotateY(0)",
+      // backgroundSize: "200%", // Vergroot de achtergrond om deze te laten "verdwijnen"
+      // backgroundPosition: "-150% 0%", // Verschuif de achtergrond naar beneden
+      ease: "none",
+    });
 };
 init();

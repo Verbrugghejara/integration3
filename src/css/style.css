@@ -586,7 +586,9 @@ p {
   text-align: center;
   color: #FFF6E7;
   position: absolute;
-  bottom: 8px;
+  align-items: center;
+  width: 100%;
+  /* bottom: 8px; */
 }
 
 .location-section__frame__background {
@@ -723,10 +725,24 @@ p {
 
 .cleared {
   font-weight: bold;
-  font-size: 5rem;
+  font-size: 4rem;
   text-align: center;
   font-family: alexandria, sans-serif;
   margin-top: 32px;
+
+  /* font-size: 66px; */
+  /* line-height: 80px; */
+  font-weight: 800;
+  text-transform: uppercase;
+  background: url("/assets/dirty.png") 0 0 / auto no-repeat;
+
+  /* background-position-x: left; */
+  background-color: #B20D30;
+  color: #de466c;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* opacity: 0.5; */
+
 }
 
 .location-section__parismap {
@@ -1075,11 +1091,7 @@ p {
     font-size: 2rem;
   }
 
-  .location-section__rectangle {
-    margin-left: 32px;
-    margin-right: 32px;
-    /* width: 100%; */
-  }
+
 
   .location-section__rectangle__svg-corner--bottom {
     /* top: 62px; */
@@ -1096,13 +1108,14 @@ p {
   }
 
   .location-section__jeanne-married {
-    /* display: flex; */
     justify-content: space-between;
+    /* align-items: ; */
+    /* display: flex; */
     /* align-items: stretch; */
     /* gap: 1rem; */
     transform: rotate(90deg);
-    transform-origin: bottom;
-    margin-right: -92px;
+    /* transform-origin: right; */
+    /* margin-right: -92px; */
     /* align-content: flex-end; */
     /* margin-left: -15%; */
   }
@@ -1139,6 +1152,9 @@ p {
   .location-section__rectangle {
     display: flex;
     gap: 32px;
+    margin-left: 32px;
+    margin-right: 32px;
+    /* width: 100%; */
   }
 
   .location-section__rectangle__info {
@@ -1191,7 +1207,7 @@ p {
     color: #FFF6E7;
     position: absolute;
     bottom: 64px !important;
-    right: 38px;
+    left: 5vh;
     font-size: 3.5rem !important;
   }
 
@@ -1379,7 +1395,7 @@ p {
 
   .location-section__jeanne-married {
     position: absolute;
-    right: 157px !important;
+    right: 20vh !important;
     transform-origin: right;
     top: 60vh;
     /* transform-origin: ; */
@@ -1416,11 +1432,15 @@ p {
   .location-section__rectangle {
     /* position: relative; */
     height: 100vh;
-    display: flex;
     justify-content: flex-end;
     width: auto;
-    /* align-items: end; */
+
+    margin-left: 48px;
+    margin-right: 48px;
   }
+
+  /* align-items: end; */
+
 
   .location-section__rectangle__info {
     display: flex;
@@ -1516,20 +1536,7 @@ p {
     overflow: hidden;
   } */
 
-  .cleared {
-    /* font-size: 66px; */
-    /* line-height: 80px; */
-    font-weight: 800;
-    text-transform: uppercase;
-    background: url("/assets/dirty.png") 0 0 / auto no-repeat;
 
-    /* background-position-x: left; */
-    background-color: #B20D30;
-    color: #de466c;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    /* opacity: 0.5; */
-  }
 
   .location-section__workshop {
     height: 160vh;
@@ -1668,10 +1675,136 @@ p {
     align-items: center;
     overflow: hidden;
   }
+
+  .location-section__jeanne h2 {
+    padding-left: 48px;
+  }
+
+
 }
 
-@media (min-width: 1920px) {
-  .only-desktop {
+@media (min-width: 1280px) {
+  /* .location-section>div {
+    padding: 48px;
+  } */
+
+  .header {
+    justify-content: center;
+    gap: 54px;
+
+  }
+
+  .header__intro h2:nth-child(2) {
+
+    left: 1vh;
+    top: 24vh;
+
+  }
+
+  .location-section__jeanne {
+    margin-left: 80px;
+  }
+
+  .jeanne-frame {
+    margin-left: -80px !important;
+  }
+
+  .jeanne-name {
+    margin-left: -80px !important;
+  }
+
+  .location-section__rectangle__name h2 {
+    font-size: 5rem !important;
+  }
+
+  .location-section__frame__image__img-groot {
     display: block;
+    width: 60vh;
+
+  }
+
+  .location-section__frame__fixed {
+    top: 10vh;
+  }
+
+  #magdalena .location-section__frame__fixed {
+    top: 0vh !important;
+  }
+
+  .location-section__frame__name-martina {
+
+    bottom: 7vh !important;
+    font-size: 4.5rem !important;
+  }
+
+  .location-section__frame__magdalena {
+    text-align: center;
+    color: #FFF6E7;
+    position: absolute;
+    bottom: 5vh;
+    right: 0;
+    left: 4vh;
+    font-size: 3.5rem !important;
+  }
+
+  .location-section__rectangle {
+
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+
+  .location-section>div {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  .jobs {
+    font-size: 3.5rem;
+  }
+
+  .location-section__printer__rectangle__img img {
+    width: 50vh;
+  }
+
+  .location-section__printer__rectangle {
+    gap: 64px;
+    margin-bottom: 32px;
+  }
+
+  .location-section__bijbel {
+    flex-direction: row;
+    gap: 64px;
+  }
+
+  .location-section__bijbel__svg img {
+    width: 50vh;
+  }
+
+  .location-section__bijbel__svg-corner {
+    position: absolute;
+    /* Positioneer de SVG absoluut ten opzichte van de container */
+    top: -2vh;
+    /* Zet de SVG in de bovenste hoek */
+    left: -7vh;
+    height: 50%;
+    width: 50%;
+    stroke-width: 8px !important;
+    /* Zet de SVG in de linkerhoek */
+    /* padding-bottom: 8px; */
+    stroke: #191923;
+  }
+
+  .location-section__bijbel__svg-corner--bottom {
+    position: absolute;
+    bottom: -2vh !important;
+    stroke: #191923;
+    /* Zet de tweede SVG 0px van de onderkant */
+    right: -7vh !important;
+    height: 50%;
+    width: 50%;
+    stroke-width: 8px !important;
+    /* Zet de tweede SVG in de rechterhoek */
   }
 }
+
+@media (min-width: 1920px) {}
