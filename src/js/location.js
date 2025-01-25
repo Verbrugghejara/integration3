@@ -49,12 +49,17 @@ function addMarkers() {
         console.log("paris");
         locationParis();
         pathParis();
+        nameCleared();
       } else if (marker.locatie == "Antwerp") {
         locationAntwerp();
+        carveAnimation();
+        printerLever();
+        workshopData();
       } else if (marker.locatie == "Caen") {
         locationCaen();
       } else if (marker.locatie == "Saint-Avertin") {
         locationAvertin();
+        storkAnimation();
       } else if (marker.locatie == "Leiden") {
         locationLeiden();
       }
@@ -99,7 +104,6 @@ function initLocations() {
   locationContainer.innerHTML = "";
 }
 function locationAntwerp() {
-  console.log("Antwerp toegevoegd");
   const html = `<svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
     stroke-linejoin="round" class="lucide lucide-arrow-up">
@@ -107,19 +111,28 @@ function locationAntwerp() {
     <path d="M12 19V5" />
   </svg>
       <h2 class=" justify-center location-name" >Antwerp</h2>
-    <div class="container">
-      <h2 class="highlight mb-sm">1550</h2>
-      <p class="mb-md">Plantin arrived in the bustling city of Antwerp, ready to carve out <span class="highlight">a new
-          life</span>.
-        <br>He began by working as a...
-      </p>
-      <p class="jobs">bookbinder and leatherworker</p>
+    <div class="location-section__newlife container">
+      <div class="location-section__newlife--sticky">
+        <h2 class="highlight mb-sm">1550</h2>
+        <p class="mb-md">Plantin arrived in the bustling city of Antwerp, ready to carve out <span class="highlight">a
+            new
+            life</span>.
+          <br>He began by working as a...
+        </p>
+        <div class="location-secton__newlife--animation">
+          <img class="location-section__newlife--chisel" src="/assets/chisel.png" alt="">
+          <img class="location-section__newlife--hammer" src="/assets/hammer.png" alt="">
+          <p class="jobs">bookbinder and leatherworker</p>
+        </div>
+
+      </div>
     </div>
-    <div class="location-section__printer mb-md container">
+   <div class="location-section__printer mb-md container">
       <p class="mb-md">He became a burgher of the city, securing his place in its community. With his footing steady, he
         set his
         sights on a
-        new ambition, a path that would soon define his <span class="highlight">legacy</span>. By becoming a ...</p>
+        new ambition, a path that would soon define his <span class="highlight">legacy</span>. <br> By becoming a ...
+      </p>
       <div class="location-section__printer__rectangle">
         <div class="location-section__printer__rectangle__svg ">
           <div class="location-section__printer__rectangle__name">
@@ -141,6 +154,9 @@ function locationAntwerp() {
           </svg>
 
         </div>
+        <!-- <button class="location-section__printer--lever"> -->
+        <img class="location-section__printer--lever" src="/assets/lever.png" alt="Printer Lever">
+        <!-- </button> -->
       </div>
     </div>
     <div class="container">
@@ -390,7 +406,7 @@ function locationParis() {
             class="highlight">required to follow</span> the
           official
           faith. Going against this official religion was <span class="highlight">risky</span> and could lead to
-          <span class="highlight">serious consequences</span>, which was...
+          <span class="highlight">serious consequences</span>, the regligion was...
         </p>
         <div class="location-section__rectangle__svg">
           <div class="location-section__rectangle__name">
@@ -731,6 +747,34 @@ function locationLeiden() {
         Justus Lipsius, Plantin was appointed as university printer. He established the first scientific publishing house and
         bookshop in the Northern Netherlands there. His sons-in-law now ran the business in Antwerp.</p>
       </div>
+    </div>`;
+  locationContainer.innerHTML = html;
+  scrollToLocation();
+}
+function locationAvertin() {
+  const html = `  <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="lucide lucide-arrow-up">
+      <path d="m5 12 7-7 7 7" />
+      <path d="M12 19V5" />
+    </svg>
+    <h2 class=" justify-center location-name">Saint-Avertin</h2>
+    <div class="location-section__birth">
+    <div class="location-section__birth--sticky">
+      <div class="location-section__storkBaby">
+        <img class="location-section__stork--image" src="/assets/stork.png" alt="">
+        <img class="location-section__baby--image" src="/assets/baby.png" alt="">
+
+      </div>
+      <div class="location-section__birth--info">
+        <p>He</p>
+        <p>was</p>
+        <p>born</p>
+        <p>around</p>
+        <h2 class="location-section__birth--year highlight">1520</h2>
+
+      </div>
+    </div>
     </div>`;
   locationContainer.innerHTML = html;
   scrollToLocation();

@@ -832,11 +832,127 @@ p {
   padding: 20px;
 }
 
+
+.location-section__birth {
+  position: relative;
+  height: 300vh;
+}
+
+.location-section__birth--sticky {
+  position: sticky !important;
+  top: 10vh;
+}
+
+.location-section__storkBaby {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
 .location-section__stork--image {
+  position: absolute;
   width: 20vw;
 }
 
+.location-section__baby--image {
+  position: absolute;
+  width: 10vw;
+  left: 12%;
+  padding-top: 10%;
+  /* display: none; */
+}
 
+.location-section__birth--info {
+  display: flex;
+  align-items: end;
+  gap: 15%;
+  padding-top: 25%;
+  padding-left: 15%;
+}
+
+.location-section__birth--info p:nth-child(1) {
+  display: none;
+  opacity: 0;
+}
+
+.location-section__birth--info p:nth-child(2) {
+  display: none;
+  opacity: 0;
+}
+
+.location-section__birth--info p:nth-child(3) {
+  display: none;
+  opacity: 0;
+}
+
+.location-section__birth--info p:nth-child(4) {
+  display: none;
+  opacity: 0;
+}
+
+.location-section__birth--year {
+  display: none;
+  opacity: 0;
+
+}
+
+
+.location-section__newlife {
+  height: 300vh;
+}
+
+.location-section__newlife--sticky {
+  position: sticky;
+  top: 10vh;
+}
+
+
+.jobs {
+  color: #ECDBC3;
+  opacity: 25%;
+  margin-top: 35%;
+  font-weight: bold;
+  text-align: center;
+  font-size: 3rem;
+}
+
+.location-secton__newlife--animation img {
+  width: 30%;
+  position: absolute;
+  left: 26%;
+  bottom: 9%;
+  z-index: -1;
+}
+
+.location-section__newlife--chisel {
+  rotate: -55deg;
+  transform-origin: bottom left;
+}
+
+.location-section__newlife--hammer {
+  rotate: 50deg;
+  padding-left: 10%;
+  padding-bottom: 11.5%;
+  transform-origin: center right;
+}
+
+.location-section__printer--lever {
+  position: absolute;
+  width: 45%;
+  /* z-index: -1; */
+  left: 41.7vw;
+  transform-origin: left center;
+  rotate: -40deg;
+  cursor: pointer;
+}
+
+/* .location-section__printer--lever {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  width: 100%;
+} */
 
 .map-section__parismap__border {
   position: absolute;
@@ -852,14 +968,6 @@ p {
 
 .text-center {
   text-align: center;
-}
-
-.jobs {
-  color: #ECDBC3;
-  opacity: 25%;
-  font-weight: bold;
-  text-align: center;
-  font-size: 2rem;
 }
 
 .location-section__printer {
@@ -917,6 +1025,7 @@ p {
 
 .location-section__printer__rectangle__name {
   border: #191923 solid 1px;
+  background-color: #FFF6E7;
   text-align: center;
   width: fit-content;
   padding: 16px;
