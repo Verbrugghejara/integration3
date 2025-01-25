@@ -28,7 +28,7 @@ body {
   min-width: 360px;
   min-height: 100vh;
   /* width: 100vh; */
-  max-width: 100vw;
+  /* max-width: 100%; */
   overflow-x: hidden;
 }
 
@@ -37,18 +37,36 @@ button {
   margin-top: 8px;
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.4em 0.8em;
-  font-size: 1.25em;
+  padding: 0.5em 0.8em;
+  line-height: 100%;
+  font-size: 1rem;
   font-weight: bold;
   font-family: inherit;
   color: #FFF6E7;
   background-color: #B20D30;
   cursor: pointer;
   transition: border-color 0.25s;
+  font-family: alexandria, sans-serif;
 }
 
+.map-section__europe--duimspijker {
+  position: absolute;
+  width: 5%;
+  background-size: cover;
+  /* Zorg dat de PNG goed past */
+  background-repeat: no-repeat;
+  /* Geen herhaling */
+  /* transform: translate(-50%, -50%); */
+  transform: translate(50%, 50%);
+  cursor: url(./11zon_magnifyGlass.cur), auto !important;
+  transform-origin: bottom left;
+}
+
+
 button:hover {
-  border-color: #646cff;
+  opacity: 0.75;
+
+
 }
 
 button:focus,
@@ -57,7 +75,13 @@ button:focus-visible {
 }
 
 nav {
-  margin: 16px !important;
+  /* background-color: #191923; */
+  /* color: #FFF6E7; */
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 16px;
+  /* margin: 16px !important; */
+  margin-bottom: 32px !important;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -71,6 +95,7 @@ nav {
 
 h1 {
   font-weight: bold;
+  /* padding-top: 32px; */
   text-transform: uppercase;
   font-size: 1.25rem;
   line-height: 1.1;
@@ -87,6 +112,8 @@ p {
   /* padding-top: 8px; */
   padding-bottom: 8px;
   line-height: 120%;
+  font-family: alexandria, sans-serif;
+  font-weight: 300;
 }
 
 
@@ -183,10 +210,23 @@ p {
   font-size: 1rem;
 }
 
+
+.location-section__workshop__tampon {
+  display: flex !important;
+  gap: 80px;
+}
+
+
+.location-section__workshop__tampon img {
+  width: 20vh;
+  rotate: 30deg;
+}
+
 .map-section {
   position: relative;
   width: 100%;
   height: auto;
+  margin: 0 auto;
   /* min-height: 40vh; */
   /* margin-bottom: 16px ; */
 }
@@ -196,6 +236,7 @@ p {
   color: #FFF6E7;
   transform: rotate(-90deg);
   text-transform: uppercase;
+  font-family: 'Times New Roman', Times, serif;
   /* font-weight: 300; */
   bottom: 48px;
   left: -16px;
@@ -224,10 +265,12 @@ p {
   /* margin-left: -16px; */
   /* margin-bottom: -16px; /*als ik op een locatie klik moet dit uit*/
   /* margin-bottom: 0px; als ik op een locatie klik moet dit uit */
-  width: 100vw;
+  width: 100%;
   height: auto;
-  display: block;
+  /* display: block; */
+  cursor: url(./11zon_magnifyGlass.cur), auto;
 }
+
 
 
 .map-section__border {
@@ -244,21 +287,37 @@ p {
 .map-section__flag {
   position: absolute;
   z-index: 1;
-  right: 0;
-  bottom: 24px;
+  right: -97vh;
+  bottom: 10%;
 
-  display: flex;
-  justify-content: right;
-  align-items: center;
+  display: flex !important;
+  justify-content: start;
+  align-items: end;
+  cursor: pointer;
 
   /* width: 50%; */
 }
 
+.map-section__flag div {
+  background-color: #FFF6E7;
+  /* background-color: red; */
+  padding: 16px;
+  height: 30vh;
+  max-width: 500px;
+  width: auto;
+}
+
+.map-section__flag:hover svg {
+  stroke: #ECDBC3;
+  stroke-width: 4px;
+}
+
 .map-section__flag img {
   margin-right: 5%;
-  width: 50% !important;
-  height: 50% !important;
-  right: 5px;
+  width: 10% !important;
+  height: auto;
+  left: 13%;
+  bottom: 10%;
   position: absolute;
 }
 
@@ -298,21 +357,25 @@ p {
   /* Optioneel, om de hoogte ook in te stellen (als je dat wilt) */
   /* box-sizing: border-box; */
   /* padding-top: 16px; */
+  position: relative;
+  overflow: visible;
   text-transform: uppercase;
   font-weight: bold;
   /* Zorgt ervoor dat padding en borders bij de afmetingen worden inbegrepen */
 }
 
-.location-nav svg {
+.arrow {
   position: sticky;
-  border: 2px solid #FFF6E7;
-  width: 20px;
-  height: 20px;
-  padding: 8px;
-}
+  border: 2px solid #191923;
 
-.location-nav span {
-  width: 40px;
+  /* width: 20px;
+  height: 20px; */
+  padding: 8px;
+  float: right;
+  right: 32px;
+  top: 32px;
+  z-index: 100;
+  cursor: pointer;
 }
 
 .header__intro h2:nth-child(2) {
@@ -320,6 +383,9 @@ p {
 
 }
 
+.location-section {
+  position: relative;
+}
 
 .location-section__container {
   margin-top: 32px;
@@ -337,6 +403,12 @@ p {
 .location-section__container p {
   /* width: 150px; */
   margin-bottom: 90px;
+}
+
+.location-name {
+  font-weight: bold;
+  margin-top: 32px;
+  text-transform: uppercase;
 }
 
 .location-section__book {
@@ -747,18 +819,24 @@ p {
 
 }
 
-.location-section__parismap {
-  padding: 0 !important;
-  position: relative;
-  width: 100%;
-  height: auto;
+#motionSvg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
 }
 
-.location-section__parismap img {
-  width: 100vw;
-  height: auto;
-  display: block;
+.content {
+  margin-top: 100vh;
+  padding: 20px;
 }
+
+.location-section__stork--image {
+  width: 20vw;
+}
+
+
 
 .map-section__parismap__border {
   position: absolute;
@@ -907,6 +985,35 @@ p {
   /* Maakt scrollen soepel */
 }
 
+footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #191923;
+  color: #FFF6E7;
+  align-items: center;
+  /* height: 10vh; */
+}
+
+
+footer img {
+  width: 10vh;
+}
+
+.location-section__partners {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+}
+
+.location-section__partners p {
+  text-align: center;
+  max-width: 40vw;
+  margin-bottom: -34vh;
+}
+
+
 .location-section__workshop__data {
   display: none;
 }
@@ -916,14 +1023,8 @@ p {
     display: block;
   }
 
-  nav {
-    margin: 32px;
-    /* display: flex;
-    justify-content: space-between;
-    place-items: center;
-    text-align: center; */
-    /* gap: 2rem; */
-    /* width: 100%; */
+  button {
+    font-size: 1.25em;
   }
 
   h2 {
@@ -1220,6 +1321,22 @@ p {
     font-size: 3.25rem !important;
   }
 
+  .location-section__frame__name-alexander {
+    text-align: center;
+    position: absolute;
+    bottom: 3vh;
+    left: 4vw;
+    font-size: 2.5rem !important;
+  }
+
+  .location-section__frame__name-justus {
+    text-align: center;
+    position: absolute;
+    bottom: 8vh;
+    right: 3vw;
+    font-size: 3rem !important;
+  }
+
   .location-section__son p {
     font-size: 2rem;
   }
@@ -1265,11 +1382,25 @@ p {
 }
 
 @media (min-width: 1024px) {
+  .map-section__border {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    top: 16px;
+    border: 4px solid #FFF6E7 !important;
+  }
+
   .header__container {
     /* height: 68vh; */
     max-width: 50vh;
     height: 65vh;
 
+  }
+
+  .map-section__location {
+    /* font-weight: 300; */
+    bottom: 15vh;
+    left: -5vh;
   }
 
   .location-section__rectangle__svg {
@@ -1305,7 +1436,7 @@ p {
   .header__text {
     position: relative;
     margin-top: 46vh;
-    font-size: 1rem;
+    font-size: 0.95rem;
     z-index: -1;
   }
 
@@ -1353,11 +1484,114 @@ p {
     max-width: 300px;
   }
 
+  .location-section__paris {
+    position: relative;
+    /* Container voor sticky elementen */
+    /* Zorgt ervoor dat er ruimte is voor de animatie */
+    height: 400vh;
+  }
+
+  .location-section__paris-path {
+    position: sticky !important;
+    top: 3vh;
+    /* position: relative !important; */
+    /* Alles binnen deze container blijft sticky */
+    /* top: 10vh; */
+    /* Beginpunt van sticky positie */
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+  }
+
+  .location-paris {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    /* position: sticky !important; */
+    /* float: left; */
+    /* position: absolute; */
+    /* Specifieke positionering binnen de sticky container */
+    /* top: 16vh !important; */
+    /* padding-bottom: -2vh; */
+    /* Links bovenaan */
+    padding-left: 9vw;
+    display: none;
+  }
+
+  .location-antwerp {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    /* position: absolute; */
+    /* position: sticky !important; */
+    /* Specifieke positionering binnen de sticky container */
+    /* bottom: 5%; */
+    /* top: 70vh !important; */
+    /* Rechts onderaan */
+    padding-top: 50vh;
+    padding-right: 14vw;
+    display: none;
+    /* right: 19vw; */
+    float: right;
+  }
+
+  .sold {
+    position: absolute;
+    /* position: sticky !important; */
+    /* Zorgt dat het in het midden van het pad komt */
+    /* top: 50%; */
+    /* Zet de 'sold'-stempel in het midden */
+    /* left: 50%; */
+    top: 15vh !important;
+    padding-left: 15vw;
+    /* transform: translate(0%, 30%); */
+    /* Perfect gecentreerd */
+    z-index: 20;
+    display: none;
+    /* Zorg dat het over de SVG ligt */
+  }
+
+  .location-section__paris-path p {
+    /* position: absolute; */
+    /* position: sticky !important; */
+    /* SVG is sticky binnen de container */
+    /* top: 16vh !important; */
+    /* top: 15vh; */
+    top: 1vh;
+    z-index: 100;
+    /* left: 22vw; */
+    /* transform: translate(-50%, -20%); */
+  }
+
+  .location-section__paris-path svg {
+    width: 50%;
+    /* SVG wordt kleiner weergegeven */
+    height: auto;
+    /* position: absolute; */
+    /* position: sticky !important; */
+    /* SVG is sticky binnen de container */
+    /* top: 16vh !important; */
+    /* top: 15vh; */
+    padding-left: 18vw;
+    top: 18vh;
+    left: 22vw;
+    /* transform: translate(-50%, -20%); */
+  }
+
+  .location-section__partners {
+    /* height: 50vh; */
+    align-items: center;
+    margin-top: 64px;
+    margin-bottom: 32px;
+  }
+
   .location-section__book__svg-corner--bottom {
     right: -6vh !important;
   }
 
-
+  .only-mobile {
+    display: none;
+  }
 
   .location-section__robert {
     /* display: none; */
@@ -1440,7 +1674,7 @@ p {
 
   .dark-background {
     position: relative;
-    height: 230vh;
+    height: 200vh;
   }
 
   .location-section__rectangle {
@@ -1483,6 +1717,21 @@ p {
     justify-content: end;
     /* justify-content: flex-end; */
     width: auto;
+  }
+
+  #alexander.location-section__frame {
+    justify-content: start !important;
+    gap: 20vh;
+    height: 100%;
+    margin-bottom: 32px;
+  }
+
+  #justus.location-section__frame {
+    flex-direction: row-reverse;
+    justify-content: end !important;
+    gap: 20vh;
+    height: 100%;
+    margin-bottom: 32px;
   }
 
   #magdalena.location-section__frame {
@@ -1725,8 +1974,8 @@ p {
 
   .header__intro h2:nth-child(2) {
 
-    left: 1vh;
-    top: 24vh;
+    left: 2vh;
+    top: 26vh;
 
   }
 

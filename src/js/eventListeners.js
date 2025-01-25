@@ -1,0 +1,110 @@
+const flags = document.querySelectorAll(".map-section__flag");
+
+const mediaQuery__sm = window.matchMedia("(min-width: 1024px)");
+const mediaQuery__md = window.matchMedia("(min-width: 1280px)");
+const mediaQuery__lg = window.matchMedia("(min-width: 1440px)");
+const mediaQuery__xl = window.matchMedia("(min-width: 1600px)");
+const mediaQuery__xxl = window.matchMedia("(min-width: 1920px)");
+let startpositie;
+let intervalpositie;
+
+if (mediaQuery__sm.matches) {
+  startpositie = "-55vw";
+  intervalpositie = "-58vw";
+}
+if (mediaQuery__md.matches) {
+  startpositie = "-42vw";
+  intervalpositie = "-46vw";
+}
+if (mediaQuery__lg.matches) {
+  startpositie = "-37vw";
+  intervalpositie = "-40vw";
+}
+if (mediaQuery__xl.matches) {
+  startpositie = "-34vw";
+  intervalpositie = "-37vw";
+}
+// Variabele om het interval op te slaan
+let animationInterval = setInterval(() => {
+  // Maak de wiggle-animatie met GSAP
+  flags.forEach((flag) => {
+    // Toepassen van GSAP animatie
+    gsap.fromTo(
+      flag,
+      {
+        // right: "0px", // Startpositie
+      },
+      {
+        right: startpositie, // Animatie naar links
+        duration: 0.5, // Duurt 0.5 seconden
+        repeat: 1, // Herhaal de animatie eenmaal
+        yoyo: true, // Beweeg terug naar de startpositie
+        ease: "sine.inOut", // Zachte overgang
+      }
+    );
+  });
+}, 8000);
+
+function eventListener() {
+  console.log("--------");
+  const url =
+    "https://ttk.recreatex.be/Exhibitions/Register?ID=193d593e-f57a-ed11-9592-a48785620fa0&refresh=y&language=nl";
+
+  // Selecteer alle buttons met de klasse buyTicketButton
+  const buttons = document.querySelectorAll(".buyTicketButton");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      console.log("click");
+      window.open(url, "_blank"); // Open de URL in een nieuwe tab
+    });
+  });
+
+  console.log("eventListener");
+
+  flags.forEach((flag) => {
+    let isMoved = false; // Variabele om bij te houden of de knop al is verplaatst
+    flag.style.right = intervalpositie;
+    flag.addEventListener("click", () => {
+      clearInterval(animationInterval); // Stop het interval
+      console.log("flag clicked");
+
+      if (isMoved) {
+        // Als de knop al is verplaatst, breng het dan terug naar de originele positie
+        gsap.fromTo(
+          flag,
+          { right: "0" }, // Startpositie als het al verplaatst is
+          { right: intervalpositie, duration: 0.5, ease: "sine.inOut" }
+        );
+      } else {
+        // Als de knop nog niet is verplaatst, verplaats het naar -221% naar rechts
+        gsap.fromTo(
+          flag,
+          { right: startpositie }, // Startpositie
+          { right: "0%", duration: 0.5, ease: "sine.inOut" }
+        );
+      }
+
+      // Toggle de staat van de knop
+      isMoved = !isMoved; // Als het verplaatst is, zet het terug naar niet-verplaatst, en vice versa
+    });
+  });
+
+  const arrows = document.querySelectorAll(".arrow");
+  // Maak de wiggle animatie met GSAP
+  arrows.forEach((arrow) => {
+    // Genereer willekeurige waarden voor de animatie
+    arrow.addEventListener("click", () => {
+      // Toepassen van GSAP animatie
+      gsap.to(window, {
+        duration: 1, // Duur van de animatie in seconden
+        scrollTo: {
+          y: ".map-section", // Scroll naar de nieuwe inhoud
+          offsetY: -40, // Optioneel: ruimte boven de nieuwe sectie
+        },
+        ease: "power2.out", // Soort animatie
+      });
+    });
+  });
+}
+eventListener();

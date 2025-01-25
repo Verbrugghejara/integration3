@@ -1,4 +1,8 @@
-console.clear();
+// console.clear();// Zorg ervoor dat je ScrollTrigger hebt geregistreerd
+gsap.registerPlugin(ScrollTrigger);
+
+// Animeren van de cirkel langs het pad tijdens het scrollen
+
 const init2 = () => {
   gsap.registerPlugin(ScrollTrigger);
   const canvas = document.getElementById("romanCatholiscism");
@@ -32,7 +36,7 @@ const init2 = () => {
         start: "top 30%", // Start de animatie wanneer de bovenkant van het canvas 30% van de viewport bereikt
         end: "bottom 20%", // Eindig de animatie wanneer de onderkant van het canvas het midden van de viewport bereikt
         scrub: true, // Synchroniseer animatie met scrollen
-      }
+      },
     })
     .to(sword, {
       frame: frameCount - 1,
