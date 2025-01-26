@@ -1877,6 +1877,14 @@ footer img {
     rotate: 30deg;
   }
 
+  .location-section__raid__pamphlet {
+    margin-top: 0;
+  }
+
+  .location-section__raid__pamphlet div {
+    top: 30%;
+  }
+
   .location-section__book {
     max-width: 300px;
   }
@@ -1908,7 +1916,7 @@ footer img {
     font-size: 2rem;
     font-weight: bold;
     font-family: 'Times New Roman', Times, serif;
-    padding-top: 50vh;
+    padding-top: 3vh;
     padding-right: 14vw;
     display: none;
     float: right;
@@ -1919,6 +1927,7 @@ footer img {
     top: 15vh !important;
     padding-left: 15vw;
     z-index: 20;
+    width: 70%;
     display: none;
   }
 
@@ -1930,6 +1939,7 @@ footer img {
   .location-section__paris-path svg {
     width: 50%;
     height: auto;
+    rotate: 0deg;
     padding-left: 18vw;
     top: 18vh;
     left: 22vw;
