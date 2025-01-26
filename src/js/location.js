@@ -459,16 +459,28 @@ function locationParis() {
       </div>
     </div>
     <div class="location-section__raid mb-md container">
-      <div>
-        <h2 class="highlight mb-sm">1562</h2>
-        <p>
-          During this time, a <span class="highlight">raid</span> on his print shop
-          <span class="highlight">uncovered</span> something important, something
-          <span class="highlight">hidden</span>, waiting to be discovered. To uncover
-          what it was, you must <span class="highlight">search</span> the page.
-        </p>
+      <div class="location-section__raid--info">
+        <div>
+          <h2 class="highlight mb-sm">1562</h2>
+          <p>
+            During this time, a <span class="highlight">raid</span> on his print shop
+            <span class="highlight">uncovered</span> something important, something
+            <span class="highlight">hidden</span>, waiting to be discovered. To uncover
+            what it was, you must <span class="highlight">search</span> the page.
+          </p>
+        </div>
+
+        <img src="/assets/magnifyGlass.png" alt="Magnify Glass">
+
       </div>
-      <img src="/assets/magnifyGlass.png" alt="Magnify Glass">
+      <div class="location-section__raid__pamphlet">
+        <div>
+          <h2 class="highlight mb-sm">Calvinist pamphlet</h2>
+          <p>was discoverd during the raid</p>
+
+        </div>
+        <img src="/assets/pamphlet.png" alt="">
+      </div>
     </div>
     <div class="location-section__cleared container">
       <p>For a year and a half, he <span class="highlight">hid</span> in Paris, escaping <span

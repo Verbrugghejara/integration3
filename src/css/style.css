@@ -778,7 +778,7 @@ p {
   margin-bottom: 16px;
 }
 
-.location-section__raid {
+.location-section__raid--info {
   display: flex;
   /* Gebruik flexbox voor het uitlijnen van elementen */
   flex-direction: column;
@@ -790,7 +790,7 @@ p {
   /* Ruimte tussen tekst en afbeelding */
 }
 
-.location-section__raid img {
+.location-section__raid--info img {
   width: 50%;
   /* Stel de breedte van de afbeelding in */
   max-width: 200px;
@@ -2040,16 +2040,43 @@ footer img {
   }
 
   .location-section__raid {
-    /* display: flex; */
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .location-section__raid--info {
     margin-top: 64px;
     flex-direction: row;
-    /* justify-content: start; */
     align-items: start;
-    height: 100vh;
+    width: 100%;
   }
 
   .location-section__raid p {
     max-width: 50vw;
+  }
+
+  .location-section__raid__pamphlet {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    height: 50vh;
+    position: relative;
+  }
+
+  .location-section__raid__pamphlet img {
+    /* width: 500px !important; */
+    width: 55vh !important;
+    height: auto;
+  }
+
+  .location-section__raid__pamphlet div {
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    left: 3%;
+    top: 40%;
   }
 }
 
