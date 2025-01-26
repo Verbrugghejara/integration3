@@ -111,7 +111,7 @@ if (mediaQuery.matches) {
         scrollTrigger: {
           trigger: `#${id}`,
           // markers: { fontSize: "25px", fontWeight: "bold" }, // Visualiseer de start- en eindmarkers
-          start: "top 100vh",
+          start: "top 50vh",
           end: "bottom -100vh",
           scrub: true,
         },
