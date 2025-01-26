@@ -2723,13 +2723,16 @@ footer img {
     width: 150%;
     left: -370px;
   }
+
   nav {
-    padding-left:  132px;
-    padding-right:  132px;
+    padding-left: 132px;
+    padding-right: 132px;
   }
+
   button {
     font-size: 1.5rem;
   }
+
   .container {
     padding-left: 132px !important;
     padding-right: 132px !important;
@@ -2742,12 +2745,32 @@ footer img {
     margin-top: 56px;
   }
 
-    .location-section__frame__name-alexander {
-  
-      font-size: 5rem !important;
-    }
-    .location-section__frame__name-justus {
-  
-      font-size: 5rem !important;
-    }
+  .location-section__frame__name-alexander {
+
+    font-size: 5rem !important;
+  }
+
+  .location-section__frame__name-justus {
+
+    font-size: 5rem !important;
+  }
+
+  .location-section__printer--lever {
+    /* z-index: -1; */
+    left: 22.5vw;
+    top: 30%;
+  }
+
+  .museum-info {
+    max-width: 600px;
+    margin-left: 21vw;
+    margin-top: -160px;
+  }
+
+  .location-section__printer__rectangle {
+    align-items: start !important;
+  }
+  .location-section__bijbel {
+    margin-top: 64px;
+  }
 }
