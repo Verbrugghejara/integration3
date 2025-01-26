@@ -2429,8 +2429,15 @@ footer img {
     font-size: 4.5rem !important;
   }
 
+  .location-section__partners p {
+    margin-top: 80px;
+    max-width: 700px;
+    margin-bottom: -150px;
+  }
 
-
+  .shaking--hands {
+    width: 100%;
+  }
 
   .container {
     padding-left: 80px !important;
