@@ -2021,7 +2021,7 @@ footer img {
     margin-bottom: 132px;
   }
 
-  .test {
+  .dark-background__animation {
     height: 100vh;
     /* width: 100vw; */
     background-color: #191923;
@@ -2042,13 +2042,14 @@ footer img {
 
   .dark-background {
     position: relative;
-    height: 200vh;
+    height: 220vh;
   }
 
   .location-section__rectangle {
     /* position: relative; */
     height: 100vh;
     justify-content: flex-end;
+    flex-direction: row;
     width: auto;
 
     /* margin-left: 48px;
@@ -2121,6 +2122,7 @@ footer img {
 
   #henrica.location-section__rectangle {
     text-align: center;
+    width: 70%;
   }
 
   .location-section__roman {

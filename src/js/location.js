@@ -57,6 +57,13 @@ function addMarkers() {
         workshopData();
       } else if (marker.locatie == "Caen") {
         locationCaen();
+        parisBook();
+
+        daughtersScrollAnimation("margareta");
+        daughtersScrollAnimation("catharina");
+        daughtersScrollAnimation("henrica");
+        daughtersScrollAnimationImages("martina");
+        daughtersScrollAnimationImages("magdalena");
       } else if (marker.locatie == "Saint-Avertin") {
         locationAvertin();
         storkAnimation();
@@ -572,7 +579,7 @@ function locationCaen() {
         <h2>Robert II macé</h2>
       </div>
     </div>
-    <div class="test">
+    <div class="dark-background__animation">
       <div class="white"></div>
     </div>
     <div class="location-section__jeanne">

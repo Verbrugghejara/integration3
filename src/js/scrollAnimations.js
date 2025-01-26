@@ -51,13 +51,50 @@ function pathParis() {
     });
   }
 }
+function parisBook() {
+  if (mediaQuery.matches) {
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: ".location-section__book",
+          // markers: { fontSize: "25px", fontWeight: "bold" }, // Visualiseer de start- en eindmarkers
+          start: "top 25%",
+          end: "top 10%",
+          scrub: true,
+        },
+      })
+      .to(".location-section__robert", {
+        right: "0",
+        ease: "none",
+      });
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: ".location-section__book",
+          markers: { fontSize: "25px", fontWeight: "bold" }, // Visualiseer de start- en eindmarkers
+          start: "bottom 0%",
+          end: "bottom -300%",
+          scrub: true,
+        },
+      })
+      .to(".white", {
+        height: "101vh",
+        width: "100vw",
+        ease: "none",
+      })
+      .to(".white", {
+        position: "relative",
+        ease: "none",
+      });
+  }
+}
 if (mediaQuery.matches) {
   gsap.registerPlugin(ScrollTrigger); // Registreer de plugin
   gsap
     .timeline({
       scrollTrigger: {
         trigger: ".header__container",
-        markers: { fontSize: "25px", fontWeight: "bold" }, // Visualiseer de start- en eindmarkers
+        // markers: { fontSize: "25px", fontWeight: "bold" }, // Visualiseer de start- en eindmarkers
         start: "top 9%",
         end: "top -10vh",
         scrub: true,
@@ -68,47 +105,14 @@ if (mediaQuery.matches) {
       ease: "circ",
     });
 
-  gsap
-    .timeline({
-      scrollTrigger: {
-        trigger: ".location-section__book",
-        // markers: { fontSize: "25px", fontWeight: "bold" }, // Visualiseer de start- en eindmarkers
-        start: "top 25%",
-        end: "top 10%",
-        scrub: true,
-      },
-    })
-    .to(".location-section__robert", {
-      right: "0",
-      ease: "none",
-    });
-  gsap
-    .timeline({
-      scrollTrigger: {
-        trigger: ".location-section__book",
-        // markers: { fontSize: "25px", fontWeight: "bold" }, // Visualiseer de start- en eindmarkers
-        start: "bottom 0%",
-        end: "bottom -300%",
-        scrub: true,
-      },
-    })
-    .to(".white", {
-      height: "101vh",
-      width: "100vw",
-      ease: "none",
-    })
-    .to(".white", {
-      position: "relative",
-      ease: "none",
-    });
-  function applyScrollAnimation(id) {
+  function daughtersScrollAnimation(id) {
     gsap
       .timeline({
         scrollTrigger: {
           trigger: `#${id}`,
           // markers: { fontSize: "25px", fontWeight: "bold" }, // Visualiseer de start- en eindmarkers
-          start: "top 160vh",
-          end: "bottom 0vh",
+          start: "top 100vh",
+          end: "bottom -100vh",
           scrub: true,
         },
       })
@@ -121,21 +125,14 @@ if (mediaQuery.matches) {
         ease: "circ.out",
       });
   }
-  console.log(
-    "test test test zeg staat dit ding wel aan want ik wil helemaal gaan"
-  );
-
-  applyScrollAnimation("margareta");
-  applyScrollAnimation("catharina");
-  applyScrollAnimation("henrica");
-  function applyScrollAnimationImages(id) {
+  function daughtersScrollAnimationImages(id) {
     gsap
       .timeline({
         scrollTrigger: {
           trigger: `#${id}`,
           // markers: { fontSize: "25px", fontWeight: "bold" }, // Visualiseer de start- en eindmarkers
-          start: "top 160vh",
-          end: "bottom 0vh",
+          start: "top 100vh",
+          end: "bottom -100vh",
           scrub: true,
         },
       })
@@ -157,8 +154,6 @@ if (mediaQuery.matches) {
   );
 
   // Roep de functie aan voor het element #margareta (of een ander ID)
-  applyScrollAnimationImages("martina");
-  applyScrollAnimationImages("magdalena");
   console.log(
     "sssssssest test test zeg staat dit ding wel aan want ik wil helemaal gaan"
   );
@@ -254,7 +249,7 @@ function nameCleared() {
     .timeline({
       scrollTrigger: {
         trigger: ".location-section__cleared",
-        markers: { fontSize: "25px", fontWeight: "bold" },
+        // markers: { fontSize: "25px", fontWeight: "bold" },
         start: "top 40%",
         end: "bottom 40%",
         scrub: true,
