@@ -336,7 +336,7 @@ p {
 }
 
 .container {
-  padding: 16px;
+  padding: 16px !important;
 }
 
 .dark-background {
@@ -546,6 +546,7 @@ p {
 
 .location-section__jeanne {
   padding: 0 !important;
+  margin-bottom: 64px;
 }
 
 .jeanne-name {
@@ -554,6 +555,7 @@ p {
   position: absolute;
   left: 100px;
   transform: translate(0%, -100%);
+  font-family: 'Times New Roman', Times, serif !important;
 }
 
 .location-section__jeanne h2 {
@@ -649,6 +651,7 @@ p {
   left: 0;
   /* display: none; */
 }
+
 .location-section__paris-path {
   position: relative;
 }
@@ -671,6 +674,8 @@ p {
   /* display: flex;
   flex-direction: column; */
   /* justify-content: center; */
+  display: flex;
+  flex-direction: column;
   align-items: center;
 
   /* text-align: start; */
@@ -752,7 +757,7 @@ p {
   background-color: #191923;
   color: #FFF6E7;
   text-align: center;
-  height: 30vh;
+  /* height: 30vh; */
 }
 
 .location-section__rectangle__svg {
@@ -766,11 +771,14 @@ p {
 
 .location-section__rectangle {
   position: relative;
-  padding: 0 !important;
+  /* padding: 0 !important; */
   /* margin: 16px; */
-  width: fit-content;
+  /* width: fit-content; */
   height: fit-content;
   align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   /* Zorg ervoor dat de container de juiste afmetingen heeft voor de inhoud en SVG's */
 }
 
@@ -789,9 +797,6 @@ p {
   /* Zet de tweede SVG in de rechterhoek */
 }
 
-.location-section__rectangle h2 {
-  width: 100%;
-}
 
 .location-section__rectangle__svg-corner {
   position: absolute;
@@ -1225,6 +1230,23 @@ footer img {
   position: absolute;
   bottom: 3vh;
   font-size: 3rem !important;
+}
+
+.location-section__frame__name-martina {
+  text-align: center;
+  color: #FFF6E7;
+  position: absolute;
+  bottom: 16px;
+  left: 0;
+  font-size: 2.5rem;
+}
+
+.location-section__frame__magdalena {
+  text-align: center;
+  color: #FFF6E7;
+  position: absolute;
+  bottom: 16px;
+  font-size: 2.5rem;
 }
 
 .location-section__workshop__data {
@@ -1786,6 +1808,7 @@ footer img {
   }
 
   .jeanne-name {
+    /* margin-top: 0 !important; */
     font-size: 4rem;
     left: 35vh;
   }
