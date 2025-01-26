@@ -5,13 +5,112 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vite App</title>
+  <title>Plantin's Travel History</title>
+  <link rel="stylesheet" href="/src/css/reset.css">
+  <link rel="stylesheet" href="/src/css/style.css">
+  <link rel="stylesheet" href="https://use.typekit.net/pxt4ljc.css">
+
+  <!-- <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script> -->
+
+  <!-- Production version -->
+  <!-- <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    lucide.createIcons();
+  </script> -->
 </head>
 
-<body>
-  <div id="app"></div>
-  <script type="module" src="/src/main.js"></script>
-  <h1>hallo world</h1>
+<body class="body">
+  <main>
+
+  </main>
+  <nav>
+    <img class="logo" src="/assets/logoMuseum.png" alt="Museum logo">
+    <h1>Plantin's <br> travel history</h1>
+    <button class="buyTicketButton">Tickets</button>
+  </nav>
+  <header class="header">
+    <div class="header__container">
+      <img class="header__image header__image--top" src="/assets/plantijnChr.jpg" alt="">
+      <p class="header__text text-center">
+        He was born around <span class="highlight">1520</span> and started his own printing works. In his career
+        he
+        <span class="highlight">travelled</span> a lot and if you want to know where and what he did,
+        <span class="highlight">scroll</span> to continue.
+      </p>
+      <img class="header__image header__image--bottom" src="/assets/plantijnChr.jpg" alt="">
+    </div>
+    <div class="header__intro">
+      <div class="header__name">
+        <h2 class="mb-sm"><span class="text-element">This is</span><br> <span class="highlight">Christophe Plantin</span>
+        </h2>
+        <h2 class="mb-sm"><span class="text-element">This is</span><br> Christophe Plantin</h2>
+
+      </div>
+      <p>
+        He was a <span class="highlight">master printer</span> who founded one of the most important print houses in
+        Antwerp. His <span class="highlight">Plantin-Moretus House</span> showcases the <span class="highlight">world’s
+          oldest printing presses</span>, rare
+        manuscripts, and beautifully preserved
+        interiors.
+      </p>
+      <button class="buyTicketButton">Buy a ticket</button>
+
+    </div>
+  </header>
+  <p class="container map-info">The map below map highlights <span class="highlight">key locations</span> with pins.
+    Discover <span class="highlight">where</span> he went and <span class="highlight">what</span> he did at each place.
+  </p>
+  <section id="map-container" class="map-section">
+    <img src="/assets/rippedPaper.png" alt="" class="map-section__rippedPaper">
+    <span class="map-section__border"></span>
+    <div class="map-section__flag only-desktop">
+      <img src="/assets/logoPasser2.png" alt="">
+      <svg width="813" height="313" viewBox="0 0 813 313" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M50.2295 261L0 210H50.2295H100.459H168.229H169.229H215.229V313H169.229H168.229H100.459H50.2295H0L50.2295 262V261Z"
+          fill="#FFF6E7" />
+        <rect x="215" width="598" height="313" fill="#FFF6E7" />
+      </svg>
+
+      <div>
+        <h2 class="highlight mb-sm">First atlas</h2>
+        <p>The image you see is from the Atlas Ortelius, is the first “modern” world atlas. The Antwerp mapmaker Abraham
+          Ortelius
+          (1527-1598) had a
+          number of existing maps redrawn in a standard format and published them as a book. It was first published in
+          1570 at
+          Christophe Plantin's printing house.
+        </p>
+      </div>
+    </div>
+    <p class="map-section__location">Europe</p>
+    <!-- <img class="custom-cursor" src="/assets/magnifyGlass.png" alt="Magnify Glass"> -->
+    <!-- <img class="map-section__europ--duimspijker" src="/assets/duimspijker.png" alt=""> -->
+    <img src="/assets/europe.png" alt="Map" class="map-section__europe">
+  </section>
+
+  <section class="location-section">
+
+
+  </section>
+  <footer class="container">
+    <img class="footer-img" src="/assets/logoWit.png" alt="">
+    <p></p>
+    <button class="buyTicketButton">Tickets</button>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollToPlugin.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="src/js/scrollAnimations.js"></script>
+  <script src="src/js/location.js"></script>
+  <script src="src/js/eventListeners.js"></script>
+  <script src="src/js/sequence.js"></script>
+
 </body>
+<!-- <div id="app"></div> -->
+<!-- <script type="module" src="/src/main.js"></script> -->
+
+<!-- <h1>hallo world</h1> -->
 
 </html>

@@ -1,0 +1,2882 @@
+:root {
+  font-family: 'Times New Roman', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: #191923;
+  background-color: #FFF6E7;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  /* margin: 16px; */
+  min-width: 360px;
+  min-height: 100vh;
+  /* width: 100vh; */
+  /* max-width: 100%; */
+  overflow-x: hidden;
+}
+
+.map-info {
+  /* font-size: 0.9rem; */
+}
+
+button {
+  /* z-index: ; */
+  margin-top: 8px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.7rem 0.8rem;
+  line-height: 100%;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: inherit;
+  color: #FFF6E7;
+  background-color: #B20D30;
+  cursor: pointer;
+  transition: border-color 0.25s;
+  font-family: alexandria, sans-serif;
+}
+
+.map-section__europe--duimspijker {
+  position: absolute;
+  width: 5%;
+  background-size: cover;
+  /* Zorg dat de PNG goed past */
+  background-repeat: no-repeat;
+  /* Geen herhaling */
+  /* transform: translate(-50%, -50%); */
+  transform: translate(50%, 50%);
+  cursor: url(./11zon_magnifyGlass.cur), auto !important;
+  transform-origin: bottom left;
+}
+
+
+button:hover {
+  opacity: 0.75;
+
+
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+nav {
+  /* background-color: #191923; */
+  /* color: #FFF6E7; */
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 16px;
+  /* margin: 16px !important; */
+  margin-bottom: 32px !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* place-items: center; */
+  text-align: center;
+  /* width: fit-content; */
+  /* width: 500px; */
+  /* gap: 2rem; */
+  /* width: 100%; */
+}
+
+h1 {
+  font-weight: bold;
+  /* padding-top: 32px; */
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  line-height: 1.1;
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p {
+  font-size: 1.25rem;
+  /* padding-top: 8px; */
+  padding-bottom: 8px;
+  line-height: 120%;
+  font-family: alexandria, sans-serif;
+  font-weight: 300;
+}
+
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.highlight {
+  color: #B20D30;
+}
+
+.nav--span {
+  width: 68px;
+}
+
+.logo {
+  height: 4em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.header {
+  margin: 16px;
+  /* width: 100%; */
+}
+
+.header__container {
+  position: relative;
+  border: 1px solid black;
+  border-top-left-radius: 320px;
+  border-top-right-radius: 320px;
+  padding: 8px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  max-width: 520px;
+  height: 70%;
+}
+
+.header__image {
+  width: 100%;
+  object-fit: cover;
+  /* max-width: 320px; */
+  max-width: 640px;
+}
+
+/* @media (min-width: 480px) {
+  .header__image--top {
+    height: 35vh !important;
+  }
+
+  .header__image--bottom {
+    height: 20vh !important;
+  }
+
+} */
+
+.text-element {
+  display: none;
+}
+
+.header__intro h2 {
+  margin-top: -32px;
+}
+
+
+.header__image--top {
+  border-top-left-radius: 320px;
+  border-top-right-radius: 320px;
+  object-fit: cover;
+  /* Zorg ervoor dat de afbeelding proportioneel blijft */
+  object-position: top;
+  height: 250px;
+  /* Hoogte als percentage van de viewport */
+  max-height: 500px;
+  max-width: 520px;
+  /* width: 100%; */
+  /* Beperk de maximale hoogte */
+}
+
+.header__image--bottom {
+  /* min-width: 300px; */
+  max-width: 520px;
+  object-fit: cover;
+  /* Proportioneel aanpassen */
+  object-position: bottom;
+  height: 110px;
+  /* Hoogte als percentage van de viewport */
+}
+
+.header__text {
+  padding-top: 8px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+
+.location-section__workshop__tampon {
+  display: flex !important;
+  gap: 80px;
+}
+
+
+.location-section__workshop__tampon img {
+  width: 20vh;
+  rotate: 30deg;
+}
+
+.map-section {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  /* min-height: 40vh; */
+  /* margin-bottom: 16px ; */
+}
+
+.map-section__location {
+  position: absolute;
+  color: #FFF6E7;
+  transform: rotate(-90deg);
+  text-transform: uppercase;
+  font-family: 'Times New Roman', Times, serif;
+  /* font-weight: 300; */
+  bottom: 48px;
+  left: -16px;
+  font-size: 0.7rem;
+  border: 1px solid #FFF6E7;
+  border-top-right-radius: 190px;
+  border-bottom-left-radius: 190px;
+  padding: 6px 24px;
+}
+
+.map-section__rippedPaper {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  /* margin-left: -16px; */
+  /* margin-bottom: -16px; */
+  width: 100vw;
+  height: auto;
+  /* display: block; */
+}
+
+
+.map-section__europe {
+  /* position: absolute; */
+  /* bottom: 0; */
+  /* margin-left: -16px; */
+  /* margin-bottom: -16px; /*als ik op een locatie klik moet dit uit*/
+  /* margin-bottom: 0px; als ik op een locatie klik moet dit uit */
+  width: 100%;
+  height: auto;
+  /* display: block; */
+  cursor: url(./11zon_magnifyGlass.cur), auto;
+}
+
+
+
+.map-section__border {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  border: 2px solid #FFF6E7;
+  pointer-events: none;
+}
+
+.map-section__flag {
+  position: absolute;
+  z-index: 1;
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: start;
+  align-items: end;
+  cursor: pointer;
+  width: fit-content;
+  top: 35%;
+
+  /* width: 50%; */
+}
+
+.map-section__flag div {
+  /* background-color: #FFF6E7; */
+  /* background-color: red; */
+  /* padding: 16px; */
+  /* height: 30vh; */
+  position: absolute;
+  left: 25vw !important;
+  /* max-width: 500px; */
+  width: 500px;
+  top: 5vh;
+  position: absolute;
+}
+
+.map-section__flag:hover svg {
+  stroke: #ECDBC3;
+  stroke-width: 4px;
+
+}
+
+.map-section__flag img {
+  /* margin-right: 5%; */
+  width: 10vw !important;
+  height: auto;
+  left: 0;
+  z-index: 100;
+  /* bottom: 10%; */
+  padding-left: 6vw;
+  padding-top: 38vh;
+  position: absolute;
+}
+
+.map-section__flag svg {
+  width: fit-content;
+  height: auto;
+  fill: #FFF6E7;
+  position: absolute;
+  min-height: 50px;
+  /* height: 100%; */
+}
+
+.container {
+  padding: 16px !important;
+}
+
+.dark-background {
+  background-color: #191923;
+  color: #FFF6E7;
+  height: 100vh;
+}
+
+.dark-background h2 {
+
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+.location-nav {
+  /* display: flex; */
+  /* padding: 16px; */
+  /* color: #FFF6E7; */
+
+  /* width: 100%; */
+  /* Zorg ervoor dat de div de volledige breedte van de oudercontainer gebruikt */
+  /* height: 100vh; */
+  /* Optioneel, om de hoogte ook in te stellen (als je dat wilt) */
+  /* box-sizing: border-box; */
+  /* padding-top: 16px; */
+  position: relative;
+  overflow: visible;
+  text-transform: uppercase;
+  font-weight: bold;
+  /* Zorgt ervoor dat padding en borders bij de afmetingen worden inbegrepen */
+}
+
+.arrow {
+  position: sticky !important;
+  float: right;
+  z-index: 1000;
+  cursor: pointer;
+  /* padding-right: 32px; */
+  right: 32px !important;
+  top: 32px !important;
+  /* padding-left: 32px !important; */
+  /* width: 44px;
+  height: 44px; */
+  border: 2px solid #191923;
+  /* margin-top: 20px; */
+  position: absolute;
+  padding: 8px;
+
+}
+
+.arrow svg {
+  border: 2px solid #191923;
+  /* margin-top: 20px; */
+  position: absolute;
+  padding: 8px;
+  /* margin-right: 32px; */
+}
+
+.header__intro h2:nth-child(2) {
+  display: none;
+
+}
+
+.location-section {
+  position: relative !important;
+}
+
+.location-section__container {
+  margin-top: 32px;
+  margin-bottom: 16px;
+  /* display: flex;
+  align-items: end; */
+  gap: 16px;
+  /* justify-content: center; */
+}
+
+.location-section__container img {
+  width: 100%;
+}
+
+.location-section__container p {
+  /* width: 150px; */
+  margin-bottom: 90px;
+}
+
+.location-name--avertin {
+
+  font-weight: bold;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  text-transform: uppercase;
+  /* width: 100%; */
+}
+
+.location-name {
+  font-weight: bold;
+  margin-top: 32px;
+  text-transform: uppercase;
+  /* width: 100%; */
+  margin-left: 44px;
+}
+
+.location-section__book {
+  position: relative;
+  margin-bottom: 16px;
+  width: fit-content;
+  /* top: 0;
+  /* De SVG-container neemt de volledige ruimte in van de bovenkant van de container */
+}
+
+.location-section__book__svg-corner {
+  position: absolute;
+  /* Positioneer de SVG absoluut ten opzichte van de container */
+  top: 0;
+  /* Zet de SVG in de bovenste hoek */
+  left: -12%;
+  height: 50%;
+  width: 50%;
+  stroke-width: 15px !important;
+  /* Zet de SVG in de linkerhoek */
+  /* padding-bottom: 8px; */
+}
+
+.location-section__book__svg-corner--bottom {
+  position: absolute;
+  bottom: 5px !important;
+  /* Zet de tweede SVG 0px van de onderkant */
+  right: -40px !important;
+  height: 50%;
+  width: 50%;
+  stroke-width: 15px !important;
+  /* Zet de tweede SVG in de rechterhoek */
+}
+
+.location-section__bijbel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.location-section__bijbel__svg {
+  position: relative;
+  align-items: center;
+  /* margin-bottom: 16px; */
+  margin: 0;
+  padding: 0 !important;
+  width: fit-content;
+  /* top: 0;
+  /* De SVG-container neemt de volledige ruimte in van de bovenkant van de container */
+}
+
+.justify-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.location-section__bijbel__svg-corner {
+  position: absolute;
+  /* Positioneer de SVG absoluut ten opzichte van de container */
+  top: -8px;
+  /* Zet de SVG in de bovenste hoek */
+  left: -30px;
+  height: 50%;
+  width: 50%;
+  stroke-width: 8px !important;
+  /* Zet de SVG in de linkerhoek */
+  /* padding-bottom: 8px; */
+  stroke: #191923;
+}
+
+.location-section__bijbel__svg-corner--bottom {
+  position: absolute;
+  bottom: -8px !important;
+  stroke: #191923;
+  /* Zet de tweede SVG 0px van de onderkant */
+  right: -30px !important;
+  height: 50%;
+  width: 50%;
+  stroke-width: 8px !important;
+  /* Zet de tweede SVG in de rechterhoek */
+}
+
+.location-section__jeanne-content {
+  display: flex;
+  margin-top: 16px;
+  padding: 0 !important;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* .jeanne-image {
+  margin-top: 16px;
+  margin-left: -24%;
+  text-align: center;
+  width: fit-content;
+
+} */
+.jeanne-frame {
+  /* margin-left: -40%; */
+  margin-top: 16px;
+  /* left: 0; */
+  /* margin-left: 0; */
+  /* Zet marges standaard op 0 om te zorgen voor een responsieve opmaak */
+  /* text-align: center; */
+  width: 100%;
+  /* Zorg ervoor dat de container 100% breed is van de beschikbare ruimte */
+  max-width: 300px;
+  /* Zet een maximale breedte voor grotere schermen */
+}
+
+.jeanne-image-md {
+  display: none;
+}
+
+.location-section__jeanne {
+  padding: 0 !important;
+  margin-bottom: 64px;
+}
+
+.jeanne-name {
+  font-size: 2.5rem;
+  text-align: center;
+  position: absolute;
+  left: 100px;
+  transform: translate(0%, -100%);
+  font-family: 'Times New Roman', Times, serif !important;
+}
+
+.location-section__jeanne h2 {
+  padding-left: 16px;
+  margin-top: 16px;
+}
+
+.location-section__jeanne-married {
+  display: flex;
+  align-items: stretch;
+  /* gap: 1rem; */
+  transform: rotate(90deg);
+  transform-origin: center;
+  /* margin-right: 16px; */
+  align-content: start;
+  /* margin-left: -15%; */
+}
+
+.married-info {
+  border: #191923 solid 1px;
+  padding: 8px;
+  text-transform: uppercase;
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 300;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.margin-md {
+  margin: 16px;
+}
+
+.married-image {
+  border: #191923 solid 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  margin-left: -1px;
+}
+
+.married-image img {
+  width: 60px;
+  height: auto;
+  padding: 8px;
+}
+
+.font-alexandria {
+  font-family: alexandria, sans-serif;
+}
+
+.married-info-sm {
+  font-size: 0.7rem;
+  text-transform: none;
+  /* Voor consistentie */
+}
+
+.location-section__jeanne-family-info {
+  margin-left: 16px;
+  margin-top: 16px;
+
+}
+
+.location-paris {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  padding-left: 9vw;
+  /* display: none; */
+}
+
+.location-antwerp {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  /* padding-top: 50vh; */
+  padding-right: 14vw;
+  /* display: none; */
+  float: right;
+}
+
+.sold {
+  position: absolute;
+  top: 40vh !important;
+  width: 100%;
+  /* padding-left: 15vw; */
+  z-index: 20;
+  left: 0;
+  /* display: none; */
+}
+
+.location-section__paris-path {
+  position: relative;
+}
+
+.location-section__paris-path p {
+  top: 1vh;
+  z-index: 100;
+}
+
+.location-section__paris-path svg {
+  width: 50%;
+  height: auto;
+  padding-left: 18vw;
+  top: 18vh;
+  left: 22vw;
+}
+
+.location-section__frame {
+  /* justify-content: center; */
+  /* display: flex;
+  flex-direction: column; */
+  /* justify-content: center; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* text-align: start; */
+  position: relative;
+
+}
+
+.location-section__frame__image {
+  position: relative;
+  display: flex;
+  align-content: center;
+  /* flex-direction: column; */
+  justify-content: center;
+  /* align-items: center; */
+  border-top-left-radius: 320px;
+  border-top-right-radius: 320px;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.location-section__frame__image__img {
+  padding: 8px;
+  border: #191923 solid 1px;
+  border-top-left-radius: 320px;
+  border-top-right-radius: 320px;
+  min-width: 150px;
+  width: 50%;
+}
+
+.location-section__frame__image__img-groot {
+  display: none;
+}
+
+.location-section__frame__image h2 {
+  text-align: center;
+  color: #FFF6E7;
+  position: absolute;
+  align-items: center;
+  width: 100%;
+  /* bottom: 8px; */
+}
+
+.location-section__frame__background {
+  /* z-index: 0; */
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  /* Centreer horizontaal en verticaal */
+  text-align: center;
+  color: #ECDBC3;
+  line-height: 120%;
+  font-size: 5rem;
+  opacity: 50%;
+}
+
+#justus .location-section__frame__background {
+  font-size: 6.4rem;
+}
+
+.text-white {
+  color: #FFF6E7;
+}
+
+.location-section__cross {
+  padding: 0 !important;
+  width: 100vw;
+  overflow: hidden;
+  margin: 0 !important;
+}
+
+.location-section__cross img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.location-section__son {
+  background-color: #191923;
+  color: #FFF6E7;
+  text-align: center;
+  /* height: 30vh; */
+}
+
+.location-section__rectangle__svg {
+  position: relative;
+  margin-bottom: 16px;
+  width: fit-content;
+  height: fit-content;
+  /* top: 0;
+  /* De SVG-container neemt de volledige ruimte in van de bovenkant van de container */
+}
+
+.location-section__rectangle {
+  position: relative;
+  /* padding: 0 !important; */
+  /* margin: 16px; */
+  /* width: fit-content; */
+  height: fit-content;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* Zorg ervoor dat de container de juiste afmetingen heeft voor de inhoud en SVG's */
+}
+
+
+
+.location-section__rectangle__name h2 {
+  font-size: 2.5rem;
+}
+
+.location-section__rectangle__svg-corner--bottom {
+  position: absolute;
+  /* top: 30px; */
+  bottom: -4px;
+  /* Zet de tweede SVG 0px van de onderkant */
+  right: 0;
+  /* Zet de tweede SVG in de rechterhoek */
+}
+
+
+.location-section__rectangle__svg-corner {
+  position: absolute;
+  /* Positioneer de SVG absoluut ten opzichte van de container */
+  top: -4px;
+  /* Zet de SVG in de bovenste hoek */
+  left: 0;
+  /* Zet de SVG in de linkerhoek */
+  /* padding-bottom: 8px; */
+}
+
+.px-lg {
+  padding-left: 32px !important;
+  padding-right: 32px !important;
+}
+
+.location-section__rectangle__name {
+  border: #191923 solid 1px;
+  text-align: center;
+  width: fit-content;
+  padding: 8px;
+  margin-left: 4px;
+  margin-right: 4px;
+  /* margin-bottom: 8px; */
+  /* margin-top: 8px; */
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.padding-md {
+  padding: 16px;
+}
+
+.mb-md {
+  margin-bottom: 16px;
+}
+
+.location-section__raid--info {
+  display: flex;
+  /* Gebruik flexbox voor het uitlijnen van elementen */
+  flex-direction: column;
+  align-items: end;
+  /* Centreer verticaal */
+  justify-content: space-between;
+  /* Plaats tekst links en afbeelding rechts */
+  gap: 1rem;
+  /* Ruimte tussen tekst en afbeelding */
+}
+
+.location-section__raid--info img {
+  width: 50%;
+  /* Stel de breedte van de afbeelding in */
+  max-width: 200px;
+  /* Optioneel: maximale breedte */
+}
+
+.cleared {
+  font-weight: bold;
+  font-size: 4rem;
+  text-align: center;
+  font-family: alexandria, sans-serif;
+  margin-top: 32px;
+
+  /* font-size: 66px; */
+  /* line-height: 80px; */
+  font-weight: 800;
+  text-transform: uppercase;
+  background: url("/assets/dirty.png") 0 0 / auto no-repeat;
+
+  /* background-position-x: left; */
+  background-color: #B20D30;
+  color: #de466c;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* opacity: 0.5; */
+
+}
+
+.location-section__storkBaby--image {
+  width: 90vw;
+}
+
+#motionSvg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
+.content {
+  margin-top: 100vh;
+  padding: 20px;
+}
+
+
+.location-section__birth {
+  position: relative;
+  height: 100vh;
+}
+
+.location-section__birth--sticky {
+  position: sticky !important;
+  top: 10vh;
+}
+
+.location-section__storkBaby {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.location-section__stork--image {
+  position: absolute;
+  width: 20vw;
+}
+
+.location-section__baby--image {
+  position: absolute;
+  width: 10vw;
+  left: 12%;
+  padding-top: 10%;
+  /* display: none; */
+}
+
+.location-section__birth--info {
+  display: flex;
+  align-items: end;
+  gap: 15%;
+  padding-top: 25%;
+  padding-left: 15%;
+}
+
+.location-section__birth--info p:nth-child(1) {
+  display: none;
+  opacity: 0;
+}
+
+.location-section__birth--info p:nth-child(2) {
+  display: none;
+  opacity: 0;
+}
+
+.location-section__birth--info p:nth-child(3) {
+  display: none;
+  opacity: 0;
+}
+
+.location-section__birth--info p:nth-child(4) {
+  display: none;
+  opacity: 0;
+}
+
+.location-section__birth--year {
+  display: none;
+  opacity: 0;
+
+}
+
+
+.location-section__newlife {
+  height: 300vh;
+}
+
+.location-section__newlife--sticky {
+  position: sticky;
+  top: 10vh;
+}
+
+
+.jobs {
+  color: #ECDBC3;
+  opacity: 25%;
+  margin-top: 35%;
+  font-weight: bold;
+  text-align: center;
+  font-size: 3rem;
+}
+
+/* .location-secton__newlife--animation {
+  padding-top: 100px;
+} */
+
+.location-secton__newlife--animation img {
+  width: 30%;
+  position: absolute;
+  left: 25%;
+  bottom: 37%;
+  z-index: -1;
+}
+
+.location-section__newlife--chisel {
+  rotate: -55deg;
+  transform-origin: bottom left;
+}
+
+.location-section__newlife--hammer {
+  rotate: 50deg;
+  padding-left: 10%;
+  padding-bottom: 11.5%;
+  transform-origin: center right;
+}
+
+
+.location-section__printer--lever {
+  position: absolute;
+  width: 45%;
+  /* z-index: -1; */
+  left: 41.7vw;
+  transform-origin: left center;
+  rotate: -40deg;
+  cursor: pointer;
+  top: 30%;
+}
+
+.location-section__printer--button {
+  background-color: #ECDBC3;
+  color: #191923;
+}
+
+/* .location-section__printer--lever {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  width: 100%;
+} */
+
+.map-section__parismap__border {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 8px;
+  right: 8px;
+  bottom: 8px;
+  top: 8px;
+  border: 2px solid #FFF6E7;
+  pointer-events: none;
+}
+
+.location-section__raid__pamphlet {
+  /* display: flex;
+    justify-content: center;
+    align-items: center; */
+  height: 50vh;
+  position: relative;
+  margin-top: 32px;
+}
+
+.location-section__raid__pamphlet img {
+  /* width: 500px !important; */
+  width: 100% !important;
+  height: auto;
+}
+
+.location-section__raid__pamphlet div {
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  left: 6%;
+  top: 20%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.location-section__printer {
+  display: flex;
+  /* Maak een flexcontainer */
+  justify-content: center;
+  flex-direction: column;
+  /* Centreer horizontaal */
+  align-items: center;
+}
+
+.location-section__cleared {
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+
+.gif-container {
+  display: none;
+}
+
+.location-section__printer__rectangle {
+  position: relative;
+  padding: 0 !important;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Zorg ervoor dat de container de juiste afmetingen heeft voor de inhoud en SVG's */
+}
+
+.location-section__printer__rectangle__svg {
+  position: relative;
+  margin-bottom: 16px;
+  width: fit-content;
+  height: fit-content;
+  /* top: 0;
+  /* De SVG-container neemt de volledige ruimte in van de bovenkant van de container */
+}
+
+.mb-lg {
+  margin-bottom: 32px;
+}
+
+
+.location-section__printer__rectangle__svg-corner {
+  position: absolute;
+  /* Positioneer de SVG absoluut ten opzichte van de container */
+  top: -4px;
+  /* Zet de SVG in de bovenste hoek */
+  left: 0;
+  /* Zet de SVG in de linkerhoek */
+  /* padding-bottom: 8px; */
+}
+
+.location-section__printer__rectangle__svg-corner--bottom {
+  position: absolute;
+  bottom: -4px;
+  /* Zet de tweede SVG 0px van de onderkant */
+  right: 0;
+  /* Zet de tweede SVG in de rechterhoek */
+}
+
+.location-section__printer__rectangle__name {
+  border: #191923 solid 1px;
+  background-color: #FFF6E7;
+  text-align: center;
+  width: fit-content;
+  padding: 16px;
+  margin-left: 4px;
+  margin-right: 4px;
+  /* margin-bottom: 8px; */
+  /* margin-top: 8px; */
+}
+
+.location-section__printer__rectangle__img {
+  border: #191923 solid 1px;
+  text-align: center;
+  /* width: fit-content; */
+  padding: 16px;
+  margin-left: 4px;
+  margin-right: 4px;
+  /* width: 50%; */
+}
+
+.location-section__printer__rectangle__img img {
+  max-width: 330px;
+  min-width: 220px;
+  width: 100%;
+}
+
+.location-section__printer__rectangle__name h2 {
+  font-size: 4.5rem;
+  /* transform: rotate(90deg); */
+  transform: rotateY(180deg);
+
+}
+
+.location-section__printer__button-container {
+  display: flex;
+  justify-content: flex-start;
+  /* Dit zorgt ervoor dat de knop naar links uitgelijnd wordt */
+  width: 100%;
+  margin-bottom: 64px;
+}
+
+.mb-sm {
+  margin-bottom: 8px;
+}
+
+.mb-xl {
+  margin-bottom: 64px;
+}
+
+.only-desktop {
+  display: none !important;
+}
+
+.scroll-locked {
+  overflow: hidden;
+  /* Blokkeert scrollen */
+  height: 100vh;
+  /* Zorgt ervoor dat de pagina geen inhoud buiten de viewport laat zien */
+}
+
+.scrollable-section {
+  overflow-y: scroll;
+  /* Zorg ervoor dat alleen deze sectie scrollbaar is */
+  height: 100vh;
+  /* De sectie vult de volledige viewport-hoogte */
+  scroll-behavior: smooth;
+  /* Maakt scrollen soepel */
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: #191923;
+  color: #FFF6E7;
+  align-items: center;
+  /* height: 10vh; */
+}
+
+
+footer img {
+  width: 10vh;
+}
+
+.location-section__partners {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+}
+
+.location-section__partners p {
+  text-align: center;
+  /* max-width: 40vw; */
+  /* margin-bottom: -34vh; */
+  margin-top: 32px;
+  margin-bottom: -40px;
+}
+
+.location-section__frame__name-alexander {
+  text-align: center;
+  position: absolute;
+  bottom: 3vh;
+  font-size: 2rem !important;
+}
+
+.location-section__frame__name-justus {
+  text-align: center;
+  position: absolute;
+  bottom: 3vh;
+  font-size: 3rem !important;
+}
+
+.location-section__frame__name-martina {
+  text-align: center;
+  color: #FFF6E7;
+  position: absolute;
+  bottom: 16px;
+  left: 0;
+  font-size: 2.5rem;
+}
+
+.location-section__frame__magdalena {
+  text-align: center;
+  color: #FFF6E7;
+  position: absolute;
+  bottom: 16px;
+  font-size: 2.5rem;
+}
+
+.location-section__workshop__data {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .only-desktop {
+    display: block !important;
+  }
+
+  button {
+    font-size: 1.25em;
+  }
+
+  h2 {
+    font-size: 2.5rem !important;
+  }
+
+  /* body {
+    font-size: 18px;
+    margin: 20px;
+  } */
+  .header {
+    display: flex;
+    gap: 32px;
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+
+
+  .header__intro p {
+    margin-top: 160px;
+    max-width: 550px;
+    min-width: 300px;
+    /* width: 45%; */
+  }
+
+  .header__intro h2 {
+    position: absolute;
+    text-align: center;
+    line-height: 50%;
+    font-size: 4rem !important;
+    width: 100%;
+    left: 15%;
+    margin-top: 0 !important;
+    z-index: 10;
+  }
+
+  .location-section__newlife--sticky {
+    height: fit-content;
+  }
+
+  .location-secton__newlife--animation img {
+    width: 30%;
+    position: absolute;
+    left: 30%;
+    /* top: 20.7%; */
+    bottom: 29%;
+    z-index: -1;
+  }
+
+  .location-section__newlife--chisel {
+    rotate: -55deg;
+    transform-origin: bottom left;
+  }
+
+  .location-section__newlife--hammer {
+    /* position: absolute; */
+    rotate: 50deg;
+    /* padding-left: 10%;
+    padding-bottom: 20%; */
+    /* top: 12% !important; */
+    transform-origin: center right;
+  }
+
+  .jobs {
+    margin-top: 25%;
+    font-size: 4rem;
+  }
+
+  .location-section__raid__pamphlet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    position: relative;
+    margin-top: 32px;
+  }
+
+  .location-section__raid__pamphlet img {
+    /* width: 500px !important; */
+    width: 60% !important;
+    height: auto;
+  }
+
+  .location-section__raid__pamphlet div {
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    left: 28%;
+    top: 20%;
+  }
+
+  .location-section__paris-path p {
+    top: 1vh;
+    z-index: 100;
+  }
+
+  .location-section__paris-path svg {
+    width: 40%;
+    padding-left: 30vw;
+    rotate: -10deg;
+  }
+
+  .location-antwerp {
+    margin-top: -30px !important;
+  }
+
+  .sold {
+    top: 30vh !important;
+    width: 100%;
+  }
+
+  .location-section__partners p {
+    margin-bottom: -90px;
+  }
+
+
+  .header__intro h2:nth-child(2) {
+    display: block;
+    left: 18%;
+    /* right: 0 !important; */
+    color: #ECDBC3;
+    opacity: 50%;
+    z-index: -1;
+    /* bottom: 0px; */
+    top: 124px;
+
+  }
+
+  .header__image--top {
+    /* height: 120px !important;
+    width: 100%; */
+  }
+
+  .header__image--bottom {
+    /* height: 12vh !important;
+    width: 100%; */
+    /* height: 20vh !important; */
+    height: 125px;
+  }
+
+  .footer-img {
+    width: 100px;
+  }
+
+  .header__container {
+    /* width: 100%; */
+
+  }
+
+  .text-element {
+    display: block;
+  }
+
+  .header__text {
+    text-align: center;
+    font-size: 1.25rem;
+  }
+
+
+  .map-section__flag svg {
+    width: fit-content;
+    min-height: 100px;
+    fill: #FFF6E7;
+  }
+
+  /*-------------------- zit hier ----------------------- */
+
+  .location-section__container {
+    /* margin-top: 32px; */
+    margin-bottom: 64px;
+    /* display: flex;*/
+    /* align-items: center;  */
+    gap: 16px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    /* justify-content: center; */
+  }
+
+  .location-section__container img {
+    width: 100%;
+  }
+
+  .location-section__container p {
+    /* width: 150px; */
+    font-size: 2.75rem;
+    width: 330px;
+  }
+
+
+
+  .location-section__book__svg-corner {
+    /* top: 0; */
+    /* Zet de SVG in de bovenste hoek */
+    left: -13%;
+    stroke-width: 8px !important;
+  }
+
+  .location-section__book__svg-corner--bottom {
+    bottom: 2px !important;
+    right: -45px !important;
+    stroke-width: 8px !important;
+  }
+
+  .dark-background h2 {
+    font-size: 5rem !important;
+  }
+
+  .location-section__jeanne h2 {
+    padding-left: 32px;
+    margin-top: 32px;
+    font-size: 4rem !important;
+  }
+
+  .container {
+    padding: 32px !important;
+  }
+
+
+  .map-section__location {
+    /* font-weight: 300; */
+    bottom: 80px;
+    left: -38px;
+    font-size: 2rem;
+  }
+
+  .jeanne-image-sm {
+    display: none;
+  }
+
+  .jeanne-image-md {
+    display: block;
+    width: 100%;
+  }
+
+  .jeanne-frame {
+    width: 400px;
+    width: 100%;
+  }
+
+  .location-section__jeanne-family-info {
+    margin-left: 32px;
+    margin-right: 32px;
+    /* margin-top: 64px; */
+    margin-bottom: 64px;
+    max-width: 500px;
+    font-size: 2rem;
+  }
+
+
+
+  .location-section__rectangle__svg-corner--bottom {
+    /* top: 62px; */
+    /* bottom: -16px !important; */
+  }
+
+  .jeanne-name {
+    font-size: 5rem;
+    left: 170px;
+  }
+
+  .location-section__jeanne-content {
+    display: flex;
+    position: relative;
+    margin-top: 16px;
+    padding: 0 !important;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .location-section__jeanne-married {
+    /* justify-content: space-between; */
+    /* align-items: ; */
+    /* display: flex; */
+    /* align-items: stretch; */
+    /* gap: 1rem; */
+    /* transform: rotate(90deg); */
+    position: absolute;
+    right: 17vh !important;
+    transform-origin: right;
+    top: 50vh;
+    /* margin-right: -92px; */
+    /* align-content: flex-end; */
+    /* margin-left: -15%; */
+  }
+
+  .married-info {
+    border: #191923 solid 1px;
+    padding: 8px;
+    text-transform: uppercase;
+    font-size: 4rem;
+    text-align: center;
+    font-weight: 300;
+    font-style: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
+  /* .married-image {
+    border: #191923 solid 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    margin-left: -1px;
+  } */
+
+  .married-image img {
+    width: 150px;
+    max-width: 150px;
+  }
+
+  .location-section__rectangle {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 32px;
+    /* align-items: center; */
+    /* margin-left: 32px;
+    margin-right: 32px; */
+    /* width: 100%; */
+  }
+
+  .location-section__rectangle__info {
+    flex-direction: column;
+  }
+
+
+
+  .location-section__rectangle__name {
+    width: auto;
+  }
+
+  .location-section__rectangle__name h2 {
+    font-size: 3.5rem;
+  }
+
+  .location-section__frame__background {
+    display: none;
+  }
+
+  .location-section__frame__image {
+    width: 100%;
+    display: block;
+    width: fit-content;
+  }
+
+  .location-section__frame__image__img {
+    display: none;
+  }
+
+  .location-section__frame__image__img-groot {
+    display: block;
+    width: 300px;
+
+  }
+
+  .location-section__frame {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    padding-left: 0 !important;
+  }
+
+  .location-section__frame__name-martina {
+    bottom: 24px !important;
+    left: 20px;
+    font-size: 3.5rem !important;
+  }
+
+  .location-section__frame__magdalena {
+    bottom: 24px;
+    left: 20px;
+    font-size: 3rem !important;
+  }
+
+  .location-section__frame__name-alexander {
+
+    left: 4vw;
+  }
+
+  .location-section__frame__name-justus {
+    bottom: 8vh;
+    right: 3vw;
+  }
+
+  #justus.location-section__frame {
+    flex-direction: row-reverse !important;
+    justify-content: end !important;
+    /* gap: 20vh;
+    height: 100%;
+    margin-bottom: 32px; */
+  }
+
+  .location-section__son p {
+    font-size: 2rem;
+  }
+
+  .religion-name {
+    margin: 100px 16px;
+    font-size: 4rem !important;
+  }
+
+  .cleared {
+    font-size: 8rem;
+  }
+
+  .location-section__printer__rectangle {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    /* width: fit-content; */
+  }
+
+  .location-section__printer__rectangle__name h2 {
+    font-size: 9rem !important;
+    /* transform: rotate(90deg); */
+    /* transform: rotateY(180deg); */
+
+  }
+
+  .shaking--hands {
+    margin-bottom: 32px;
+  }
+
+  .location-section__bijbel {
+    /* display: block; */
+    flex-direction: row;
+    gap: 32px;
+    /* align-items: center; */
+  }
+
+  .location-section__workshop {
+    align-items: start;
+  }
+
+  .location-section__workshop p {
+    text-align: left !important;
+  }
+
+}
+
+@media (min-width: 1024px) {
+  .map-section__border {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+    top: 16px;
+    border: 4px solid #FFF6E7 !important;
+  }
+
+
+  .map-section__location {
+    /* font-weight: 300; */
+    bottom: 16%;
+    left: -32px;
+    font-size: 2.5rem;
+  }
+
+  .location-section__rectangle__svg {
+    left: 50%;
+    /* top: 150%; */
+    transform: translate(-50%, 0%);
+  }
+
+  .location-section__workshop__data {
+    display: block;
+  }
+
+  .header__container {
+    /* height: 68vh; */
+    max-width: 55vh;
+    height: 70vh;
+    /* height: 530px; */
+
+  }
+
+  .header__image {
+    position: absolute;
+    /* width: 40vw; */
+    /* Absolute voor animatie */
+    left: 8px;
+  }
+
+  .header__image--top {
+    top: 8px;
+    /* max-width: 50vh; */
+    height: 50vh !important;
+    max-width: 55vh;
+    /* Startpositie */
+  }
+
+  .header__image--bottom {
+    bottom: 8px;
+    /* max-width: 50vh; */
+    height: 20vh !important;
+    max-width: 55vh;
+    /* Startpositie */
+  }
+
+  .header__text {
+    position: relative;
+    margin-top: 50vh;
+    font-size: 0.95rem;
+    z-index: -1;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 32px;
+  }
+
+  .logo {
+    height: 6em;
+  }
+
+  .nav--span {
+    width: 101px;
+  }
+
+  .header__name {
+    position: absolute !important;
+    width: 150%;
+    left: -230px;
+  }
+
+  .header__intro {
+    position: relative;
+  }
+
+  .header__intro h2 {
+    width: fit-content;
+    /* left: 300px; */
+    z-index: 10;
+  }
+
+  .header__intro h2:nth-child(2) {
+
+    left: -170px;
+    width: 150%;
+    top: 22px;
+
+  }
+
+  .container {
+    padding-left: 48px !important;
+    padding-right: 48px !important;
+  }
+
+  .location-nav svg {
+    width: 32px;
+    height: 32px;
+    padding: 8px;
+  }
+
+  .location-section__container {
+    justify-content: space-around;
+  }
+
+  .location-section__newlife--sticky {
+    height: fit-content;
+    top: 3vh;
+  }
+
+  .location-secton__newlife--animation img {
+    width: 25%;
+    left: 35%;
+    bottom: 27%;
+  }
+
+
+  .location-section__newlife--hammer {
+    padding-left: 8%;
+    padding-bottom: 10%;
+  }
+
+  .jobs {
+    margin-top: 25%;
+  }
+
+  .location-section__workshop__tampon {
+    display: flex !important;
+    gap: 80px;
+  }
+
+
+  .location-section__workshop__tampon img {
+    width: 20vh;
+    rotate: 30deg;
+  }
+
+  .location-section__raid__pamphlet {
+    margin-top: 0;
+  }
+
+  .location-section__raid__pamphlet div {
+    top: 30%;
+  }
+
+  .location-section__book {
+    max-width: 300px;
+  }
+
+  .location-section__paris {
+    position: relative;
+    height: 400vh;
+  }
+
+  .location-section__birth {
+    position: relative;
+    height: 300vh;
+  }
+
+  .location-section__paris-path {
+    position: sticky !important;
+    top: 3vh;
+  }
+
+  .location-paris {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    padding-left: 9vw;
+    display: none;
+  }
+
+  .location-antwerp {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 3vh;
+    padding-right: 14vw;
+    display: none;
+    float: right;
+  }
+
+  .sold {
+    position: absolute;
+    top: 15vh !important;
+    padding-left: 15vw;
+    z-index: 20;
+    width: 70%;
+    display: none;
+  }
+
+  .location-section__paris-path p {
+    top: 1vh;
+    z-index: 100;
+  }
+
+  .location-section__paris-path svg {
+    width: 50%;
+    height: auto;
+    rotate: 0deg;
+    padding-left: 18vw;
+    top: 18vh;
+    left: 22vw;
+  }
+
+  .location-section__partners {
+    /* height: 50vh; */
+    align-items: center;
+    margin-top: 64px;
+    margin-bottom: 32px;
+  }
+
+  .location-section__book__svg-corner--bottom {
+    right: -6vh !important;
+  }
+
+  .only-mobile {
+    display: none;
+  }
+
+  .location-section__robert {
+    /* display: none; */
+    position: absolute;
+    z-index: 10;
+    top: 25%;
+    font-size: 10rem !important;
+    width: 101%;
+    right: -101%;
+  }
+
+  .location-section__robert h2 {
+    /* display: none; */
+
+    font-size: 7rem !important;
+  }
+
+  .jeanne-image-md {
+    /* width: 400px; */
+    width: 50vh;
+  }
+
+  .jeanne-name {
+    /* margin-top: 0 !important; */
+    font-size: 4rem;
+    left: 35vh;
+  }
+
+  .location-section__jeanne-content {
+    margin-right: 48px;
+    position: relative;
+    /* width: 1000px !important; */
+    /* justify-content: left; */
+    display: block;
+  }
+
+  .married-info {
+    font-size: 4rem;
+  }
+
+  .location-section__jeanne-family-info {
+    margin-left: 48px;
+    align-items: center;
+  }
+
+  .location-section__jeanne-married {
+    position: absolute;
+    right: 20vh !important;
+    transform-origin: right;
+    top: 60vh;
+    /* transform-origin: ; */
+    /* margin-left: -16px; */
+  }
+
+  .married-info-sm {
+    font-size: 1.7rem;
+  }
+
+  .location-section__jeanne {
+    margin-bottom: 132px;
+  }
+
+  .dark-background__animation {
+    height: 100vh;
+    /* width: 100vw; */
+    background-color: #191923;
+    position: relative;
+  }
+
+  .white {
+    position: fixed;
+    right: 50%;
+    left: 50%;
+    top: 50vh;
+    transform: translate(-50%, -50%);
+    height: 0vh;
+    width: 0vw;
+    background-color: #FFF6E7;
+    transform-origin: center center;
+  }
+
+  .dark-background {
+    position: relative;
+    height: 220vh;
+  }
+
+  .location-section__rectangle {
+    /* position: relative; */
+    height: 100vh;
+    justify-content: flex-end;
+    flex-direction: row;
+    width: auto;
+
+    /* margin-left: 48px;
+    margin-right: 48px; */
+  }
+
+  /* align-items: end; */
+
+
+  .location-section__rectangle__info {
+    display: flex;
+    justify-content: end !important;
+    /* text-align: end; */
+  }
+
+  .location-section__rectangle__info p {
+    max-width: 50vw !important;
+    /* display: flex; */
+    /* flex-direction: column; */
+  }
+
+  .location-section__rectangle__fixed {
+    position: fixed;
+    /* height: 100vh; */
+    top: 50vh;
+    bottom: -20vh !important;
+    left: 35vh;
+    opacity: 0;
+  }
+
+  .location-section__frame {
+    height: 100vh;
+    display: flex;
+    justify-content: end;
+    /* justify-content: flex-end; */
+    width: auto;
+  }
+
+  #alexander.location-section__frame {
+    justify-content: start !important;
+    gap: 20vh;
+    height: 100%;
+    margin-bottom: 32px;
+  }
+
+  #justus.location-section__frame {
+    flex-direction: row-reverse !important;
+    justify-content: end !important;
+    gap: 20vh;
+    height: 100%;
+    margin-bottom: 32px;
+  }
+
+  #magdalena.location-section__frame {
+    justify-content: center !important;
+  }
+
+  .location-section__frame__fixed {
+    position: fixed;
+    top: 20vh;
+    /* bottom: -20vh !important; */
+    left: 0;
+    /* left: 20vh; */
+    opacity: 0;
+  }
+
+  #magdalena .location-section__frame__fixed {
+    top: 5vh !important;
+  }
+
+  #henrica.location-section__rectangle {
+    text-align: center;
+    width: 70%;
+  }
+
+  .location-section__roman {
+    height: 150vh;
+    /* margin: auto 0; */
+    /* display: flex;
+    justify-content: center; */
+    /* position: relative; */
+  }
+
+
+  .location-section__roman__sequence {
+    position: sticky;
+    top: 3vh;
+  }
+
+  .location-section__workshop {
+    height: 160vh;
+    display: block;
+    /* justify-content: start; */
+    /* align-items: start; */
+    /* position: relative; */
+  }
+
+  .location-section__workshop__info {
+    display: none;
+  }
+
+  .location-section__workshop__presses {
+    color: #ECDBC3;
+    position: relative;
+    width: 50vh;
+  }
+
+  .location-section__workshop__presses img {
+    width: 10vh;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(0);
+    /* transition: transform 0.3s ease-in-out; */
+  }
+
+  .location-section__workshop__printers {
+    /* align-items: end;
+    align-content: end; */
+    /* display: flex; */
+    /* text-align: end; */
+    float: right;
+    margin-right: 100px;
+    color: #ECDBC3;
+    position: relative;
+    width: 60vh;
+    margin-top: -30vh;
+  }
+
+  .location-section__workshop__printers img {
+    width: 3vh;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(0);
+    /* transition: transform 0.3s ease-in-out; */
+  }
+
+  .location-section__workshop__printers ul {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    /* Maak 8 gelijke kolommen */
+    gap: 20px;
+    /* Ruimte tussen de items */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .location-section__workshop__compositors {
+    /* align-items: end;
+    align-content: end; */
+    /* display: flex; */
+    /* text-align: end; */
+    /* float: right; */
+    margin-right: 30vh;
+    color: #ECDBC3;
+    position: relative;
+    width: 70vh;
+    margin-top: 30vh;
+  }
+
+  .location-section__workshop__compositors img {
+    width: 3vh;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(0);
+    /* transition: transform 0.3s ease-in-out; */
+  }
+
+  .location-section__workshop__compositors li {
+    width: fit-content;
+  }
+
+  .location-section__workshop__compositors ul {
+    width: fit-content;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    /* Maak 8 gelijke kolommen */
+    gap: 32px;
+    /* Ruimte tussen de items */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .location-section__workshop__proofreaders {
+    /* align-items: end;
+    align-content: end; */
+    /* display: flex; */
+    /* text-align: end; */
+    float: right;
+    margin-right: 0;
+    color: #ECDBC3;
+    position: relative;
+    /* width: 60vh; */
+    margin-top: -10vh;
+  }
+
+  .location-section__workshop__proofreaders img {
+    width: 3vh;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(0);
+    /* transition: transform 0.3s ease-in-out; */
+  }
+
+  .location-section__workshop__proofreaders ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 16px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 16px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .location-section__jeanne h2 {
+    padding-left: 48px;
+  }
+
+  canvas {
+    /* position: fixed; */
+    /* left: 50%;
+    top: 50%; */
+    /* transform: translate(-50%, -50%); */
+    max-width: 85vw;
+    max-height: 100vh;
+  }
+
+  .location-section__frame__magdalena {
+    text-align: center;
+    color: #FFF6E7;
+    position: absolute;
+    bottom: 5vh;
+    right: 0;
+    left: 4vh;
+    font-size: 3rem !important;
+  }
+
+  .location-section__raid {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .location-section__raid--info {
+    margin-top: 64px;
+    flex-direction: row;
+    align-items: start;
+    width: 100%;
+  }
+
+  .location-section__raid p {
+    max-width: 50vw;
+  }
+
+
+}
+
+@media (min-width: 1280px) {
+  .location-section__frame__magdalena {
+    font-size: 3.5rem !important;
+
+  }
+
+  /* .container {
+    padding: 48px;
+  } */
+  canvas {
+    /* position: fixed; */
+    /* left: 50%;
+    top: 50%; */
+    /* transform: translate(-50%, -50%); */
+    max-width: 100%;
+    max-height: 100vh;
+  }
+
+  .header {
+    justify-content: center;
+    gap: 54px;
+
+  }
+
+  .header__text {
+    margin-top: 51vh;
+  }
+
+  .header__name {
+    position: absolute !important;
+    width: 150%;
+    left: -290px;
+  }
+
+
+  .location-secton__newlife--animation img {
+    width: 35%;
+    left: 32%;
+    bottom: 7%;
+  }
+
+
+  .location-section__newlife--hammer {
+    padding-left: 11%;
+    padding-bottom: 14%;
+  }
+
+  .jobs {
+    margin-top: 55vh;
+  }
+
+  .location-section__printer p {
+    margin-bottom: 64px;
+  }
+
+  .location-section__printer--lever {
+    position: absolute;
+    width: 45%;
+    /* z-index: -1; */
+    left: 33.5vw;
+    transform-origin: left center;
+    rotate: -40deg;
+    cursor: pointer;
+    top: 30%;
+  }
+
+  .map-section__flag img {
+    /* margin-right: 5%; */
+    width: 8vw !important;
+    /* bottom: 10%; */
+    padding-left: 5vw;
+    padding-top: 36vh;
+  }
+
+  .map-section__flag {
+    top: 45%;
+
+    /* width: 50%; */
+  }
+
+  .map-section__flag div {
+    position: absolute;
+    left: 20vw !important;
+    /* max-width: 500px; */
+    width: 500px;
+    top: 5vh;
+    position: absolute;
+  }
+
+  .location-section__jeanne {
+    margin-left: 80px;
+    margin-top: 80px;
+  }
+
+  .jeanne-frame {
+    margin-left: -80px !important;
+  }
+
+  .jeanne-name {
+    margin-left: -80px !important;
+  }
+
+  .location-section__rectangle__name h2 {
+    font-size: 5rem !important;
+  }
+
+  .location-section__frame__image__img-groot {
+    display: block;
+    width: 60vh;
+
+  }
+
+  .location-section__frame__fixed {
+    top: 10vh;
+  }
+
+  #magdalena .location-section__frame__fixed {
+    top: 0vh !important;
+  }
+
+  .location-section__frame__name-martina {
+
+    bottom: 7vh !important;
+    font-size: 4.5rem !important;
+  }
+
+  .location-section__partners p {
+    margin-top: 80px;
+    max-width: 700px;
+    margin-bottom: -150px;
+  }
+
+  .location-section__book {
+    max-width: 400px;
+  }
+
+  .shaking--hands {
+    width: 100%;
+  }
+
+  .location-section__jeanne-family-info {
+    margin-top: 64px;
+  }
+
+  .dark-background {
+    height: 210vh;
+  }
+
+  .location-section__container p {
+    /* width: 150px; */
+    font-size: 2.75rem;
+    width: 400px;
+  }
+
+  .container {
+    padding-left: 80px !important;
+    padding-right: 80px !important;
+  }
+
+  .jobs {
+    font-size: 3.5rem;
+  }
+
+  .location-section__printer__rectangle__img img {
+    width: 50vh;
+  }
+
+  .location-section__printer__rectangle {
+    flex-direction: row;
+    gap: 32px;
+    margin-bottom: 32px;
+  }
+
+  .location-section__bijbel {
+    flex-direction: row;
+    gap: 64px;
+  }
+
+  .location-section__bijbel__svg img {
+    width: 50vh;
+  }
+
+  .location-section__bijbel__svg-corner {
+    position: absolute;
+    /* Positioneer de SVG absoluut ten opzichte van de container */
+    top: -2vh;
+    /* Zet de SVG in de bovenste hoek */
+    left: -7vh;
+    height: 50%;
+    width: 50%;
+    stroke-width: 8px !important;
+    /* Zet de SVG in de linkerhoek */
+    /* padding-bottom: 8px; */
+    stroke: #191923;
+  }
+
+  .location-section__bijbel__svg-corner--bottom {
+    position: absolute;
+    bottom: -2vh !important;
+    stroke: #191923;
+    /* Zet de tweede SVG 0px van de onderkant */
+    right: -7vh !important;
+    height: 50%;
+    width: 50%;
+    stroke-width: 8px !important;
+    /* Zet de tweede SVG in de rechterhoek */
+  }
+
+}
+
+@media (min-width: 1440px) {
+
+  .header {
+    gap: 80px;
+  }
+
+  .map-section__location {
+    /* font-weight: 300; */
+    bottom: 20%;
+    left: -80px;
+    font-size: 4rem;
+    padding: 6px 46px;
+  }
+
+  .header__text {
+    font-size: 1.25rem
+  }
+
+  .location-section__houseoflove {
+    max-width: 600px !important;
+    margin: 0 auto;
+  }
+
+  .location-secton__newlife--animation img {
+    width: 25%;
+    left: 37%;
+    bottom: 10%;
+  }
+
+  .location-section__newlife--hammer {
+    padding-left: 8%;
+    padding-bottom: 10%;
+  }
+
+  .map-section__flag img {
+    /* margin-right: 5%; */
+    width: 7vw !important;
+    /* bottom: 10%; */
+    padding-left: 4vw;
+    padding-top: 25vh;
+  }
+
+  .map-section__flag {
+    top: 45%;
+
+    /* width: 50%; */
+  }
+
+  .map-section__flag div {
+    position: absolute;
+    left: 20vw !important;
+    /* max-width: 500px; */
+    width: 500px;
+    top: 5vh;
+    position: absolute;
+  }
+
+  .jobs {
+    margin-top: 35%;
+    font-size: 4.5rem;
+  }
+
+  .location-section__printer {
+    /* flex-direction: row;
+    gap: 32px; */
+  }
+
+  .location-section__printer--lever {
+    left: 29.5vw;
+    transform-origin: left center;
+    rotate: -40deg;
+    cursor: pointer;
+    top: 30%;
+  }
+
+  .location-section__container {
+    /* gap: 120px !important; */
+    justify-content: space-around !important;
+    margin-top: 72px;
+  }
+
+  .location-section__book {
+    max-width: 450px;
+  }
+
+  .dark-background {
+    height: 200vh;
+  }
+
+  .location-section__jeanne-married {
+    right: 23vh !important;
+    top: 55vh;
+  }
+
+  .married-info {
+    font-size: 6rem;
+  }
+
+  .jeanne-image-md {
+    /* width: 400px; */
+    width: 60vh;
+  }
+
+  .location-section__jeanne-family-info {
+    margin-left: 80px;
+    /* align-items: center; */
+    margin-bottom: 0;
+    margin-top: 48px;
+  }
+
+  .jeanne-name {
+    margin-left: 0 !important;
+    font-size: 6rem;
+  }
+
+  .location-section__workshop__printers {
+    margin-right: 20vh;
+  }
+
+  .location-section__workshop__proofreaders {
+    float: right;
+    margin-right: -5vh;
+    color: #ECDBC3;
+    position: relative;
+    width: 60vh;
+    margin-top: -10vh;
+  }
+
+  .location-section__workshop {
+    height: 140vh;
+  }
+
+
+
+}
+
+@media (min-width: 1600px) {
+  .location-section__jeanne-married {
+    top: 62vh;
+  }
+
+  .map-section__flag img {
+    /* margin-right: 5%; */
+    width: 6vw !important;
+    /* bottom: 10%; */
+    padding-left: 4vw;
+    padding-top: 27vh;
+  }
+
+  .map-section__flag {
+    top: 45%;
+
+    /* width: 50%; */
+  }
+
+  .map-section__flag div {
+    position: absolute;
+    left: 16vw !important;
+    /* max-width: 500px; */
+    width: 500px;
+    top: 5vh;
+    position: absolute;
+  }
+
+  .location-section__container {
+    gap: 170px;
+    /* margin-top: 72px; */
+  }
+
+  .container {
+    padding-left: 112px !important;
+    padding-right: 112px !important;
+  }
+
+  .location-section__printer--lever {
+    left: 26.5vw;
+  }
+
+  .location-section__birth--info p {
+    font-size: 2rem;
+  }
+
+  .location-section__birth--info h2 {
+    font-size: 3rem !important;
+  }
+
+  .location-section__jeanne-married {
+    transform: rotate(0deg);
+    top: 25%;
+  }
+
+  .married-image img {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  .museum-info {
+    max-width: 600px;
+    margin-left: 25.5vw;
+    margin-top: -64px;
+  }
+
+  .location-section__paris-info {
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .location-section__printer {
+    margin-top: 80px;
+    margin-bottom: 64px;
+    flex-direction: row;
+    margin-right: 130px;
+    gap: 32px;
+  }
+
+  .location-section__houseoflove {
+    margin-bottom: 64px;
+  }
+
+  /* .location-section__rectangle__info p {
+    max-width: 40vw !important;
+  } */
+  .jeanne-frame {
+    margin-left: -112px !important;
+  }
+
+  .jeanne-name {
+    margin-left: -112px !important;
+  }
+
+  .location-section__robert h2 {
+    /* display: none; */
+
+    font-size: 10rem !important;
+  }
+
+
+
+  /* .dark-background {
+    height: 130vh;
+  } */
+
+}
+
+@media (min-width: 1920px) {
+  .header__name {
+    position: absolute !important;
+    width: 150%;
+    left: -370px;
+  }
+
+  nav {
+    padding-left: 132px;
+    padding-right: 132px;
+  }
+
+  button {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    padding-left: 132px !important;
+    padding-right: 132px !important;
+  }
+
+  .map-info {
+    /* float: right; */
+    margin-left: 0 auto;
+    margin-bottom: -34px;
+    margin-top: 56px;
+  }
+
+  .map-section__flag img {
+    /* margin-right: 5%; */
+    width: 6vw !important;
+    /* bottom: 10%; */
+    padding-left: 3vw;
+    padding-top: 25vh;
+  }
+
+  .map-section__flag {
+    top: 45%;
+
+    /* width: 50%; */
+  }
+
+  .map-section__flag div {
+    position: absolute;
+    left: 16vw !important;
+    /* max-width: 500px; */
+    width: 500px;
+    top: 5vh;
+    position: absolute;
+  }
+
+  .location-section__frame__name-alexander {
+
+    font-size: 5rem !important;
+  }
+
+  .location-section__frame__name-justus {
+
+    font-size: 5rem !important;
+  }
+
+  .location-section__printer--lever {
+    /* z-index: -1; */
+    left: 22.5vw;
+    top: 30%;
+  }
+
+  .museum-info {
+    max-width: 600px;
+    margin-left: 21vw;
+    margin-top: -160px;
+  }
+
+  .location-section__printer__rectangle {
+    align-items: start !important;
+  }
+
+  .location-section__bijbel {
+    margin-top: 64px;
+  }
+
+  .cleared {
+    font-size: 14rem;
+  }
+
+  .location-section__cleared p:nth-child(1) {
+    text-align: center;
+
+  }
+
+  .dark-background {
+    height: 220vh;
+  }
+}
