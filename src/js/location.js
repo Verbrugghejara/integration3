@@ -504,7 +504,7 @@ function locationParis() {
     </div>
     <div class="location-section__paris container mb-lg">
       <div class="location-section__paris-path">
-        <p>
+        <p class="location-section__paris-info">
           He made his way back to Antwerp, only to discover that during his absence, all of his cherished furniture
           had
           been sold off to the public.

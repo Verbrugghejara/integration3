@@ -1085,6 +1085,11 @@ p {
   align-items: center;
 }
 
+.location-section__cleared {
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+
 .gif-container {
   display: none;
 }
@@ -2649,6 +2654,12 @@ footer img {
     max-width: 600px;
     margin-left: 25.5vw;
     margin-top: -64px;
+  }
+
+  .location-section__paris-info {
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
   }
 
   .location-section__printer {
