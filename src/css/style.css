@@ -2718,8 +2718,36 @@ footer img {
 }
 
 @media (min-width: 1920px) {
-  /* .container {
-    padding-left: 146px !important;
-    padding-right: 146px !important;
-  } */
+  .header__name {
+    position: absolute !important;
+    width: 150%;
+    left: -370px;
+  }
+  nav {
+    padding-left:  132px;
+    padding-right:  132px;
+  }
+  button {
+    font-size: 1.5rem;
+  }
+  .container {
+    padding-left: 132px !important;
+    padding-right: 132px !important;
+  }
+
+  .map-info {
+    /* float: right; */
+    margin-left: 0 auto;
+    margin-bottom: -34px;
+    margin-top: 56px;
+  }
+
+    .location-section__frame__name-alexander {
+  
+      font-size: 5rem !important;
+    }
+    .location-section__frame__name-justus {
+  
+      font-size: 5rem !important;
+    }
 }
