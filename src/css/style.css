@@ -421,7 +421,14 @@ p {
   /* width: 150px; */
   margin-bottom: 90px;
 }
+.location-name--avertin{
 
+  font-weight: bold;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  text-transform: uppercase;
+  /* width: 100%; */
+}
 .location-name {
   font-weight: bold;
   margin-top: 32px;

@@ -777,10 +777,10 @@ function locationLeiden() {
 }
 function locationAvertin() {
   const html = `  
-    <h2 class=" justify-center location-name">Saint-Avertin</h2>
+    <h2 class=" justify-center location-name--avertin">Saint-Avertin</h2>
     <div class="location-section__birth">
     <div class="only-mobile container">
-    <h2 class="highlight">1520</h2>
+    <h2 class="highlight mb-sm">1520</h2>
     <p>Here he was born around 1520</p>
     <img class="location-section__storkBaby--image" src="/assets/storkBaby.png" alt="">
     </div>
