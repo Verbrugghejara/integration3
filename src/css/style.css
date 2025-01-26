@@ -2519,13 +2519,50 @@ footer img {
     gap: 80px;
   }
 
+  .map-section__location {
+    /* font-weight: 300; */
+    bottom: 20%;
+    left: -80px;
+    font-size: 4rem;
+    padding: 6px 46px;
+  }
+
   .header__text {
     font-size: 1.25rem
   }
 
-  .header__intro h2:nth-child(2) {
-    left: 2vh;
-    top: 18vh;
+  .location-section__houseoflove {
+    max-width: 600px !important;
+    margin: 0 auto;
+  }
+
+  .location-secton__newlife--animation img {
+    width: 25%;
+    left: 37%;
+    bottom: 10%;
+  }
+
+  .location-section__newlife--hammer {
+    padding-left: 8%;
+    padding-bottom: 10%;
+  }
+
+  .jobs {
+    margin-top: 35%;
+    font-size: 4.5rem;
+  }
+
+  .location-section__printer {
+    /* flex-direction: row;
+    gap: 32px; */
+  }
+
+  .location-section__printer--lever {
+    left: 29.5vw;
+    transform-origin: left center;
+    rotate: -40deg;
+    cursor: pointer;
+    top: 30%;
   }
 
   .location-section__container {

@@ -167,7 +167,7 @@ function locationAntwerp() {
         </button>
       </div>
     </div>
-    <div class="container">
+    <div class="location-section__houseoflove container">
       <h2 class="highlight mb-sm text-center">1555</h2>
       <p class="text-center mb-lg">He built his <span class="highlight">business</span> into the largest typographical
         enterprise of the late
