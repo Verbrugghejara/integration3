@@ -101,7 +101,7 @@ if (mediaQuery.matches) {
       },
     })
     .to(".header__container", {
-      height: "640px",
+      height: "85vh",
       ease: "circ",
     });
 
