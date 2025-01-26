@@ -293,37 +293,45 @@ p {
 .map-section__flag {
   position: absolute;
   z-index: 1;
-  right: -97vh;
-  bottom: 10%;
-
   display: flex !important;
+  flex-direction: row !important;
   justify-content: start;
   align-items: end;
   cursor: pointer;
+  width: fit-content;
+  top: 35%;
 
   /* width: 50%; */
 }
 
 .map-section__flag div {
-  background-color: #FFF6E7;
+  /* background-color: #FFF6E7; */
   /* background-color: red; */
-  padding: 16px;
-  height: 30vh;
-  max-width: 500px;
-  width: auto;
+  /* padding: 16px; */
+  /* height: 30vh; */
+  position: absolute;
+  left: 25vw !important;
+  /* max-width: 500px; */
+  width: 500px;
+  top: 5vh;
+  position: absolute;
 }
 
 .map-section__flag:hover svg {
   stroke: #ECDBC3;
   stroke-width: 4px;
+
 }
 
 .map-section__flag img {
-  margin-right: 5%;
-  width: 10% !important;
+  /* margin-right: 5%; */
+  width: 10vw !important;
   height: auto;
-  left: 13%;
-  bottom: 10%;
+  left: 0;
+  z-index: 100;
+  /* bottom: 10%; */
+  padding-left: 6vw;
+  padding-top: 38vh;
   position: absolute;
 }
 
@@ -331,6 +339,7 @@ p {
   width: fit-content;
   height: auto;
   fill: #FFF6E7;
+  position: absolute;
   min-height: 50px;
   /* height: 100%; */
 }
@@ -1438,15 +1447,6 @@ footer img {
     font-size: 1.25rem;
   }
 
-  .map-section__flag {
-
-    /* display: flex;
-    justify-content: right;
-    align-items: center; */
-
-    /* width: 50%; */
-  }
-
 
   .map-section__flag svg {
     width: fit-content;
@@ -2397,6 +2397,29 @@ footer img {
     top: 30%;
   }
 
+  .map-section__flag img {
+    /* margin-right: 5%; */
+    width: 8vw !important;
+    /* bottom: 10%; */
+    padding-left: 5vw;
+    padding-top: 36vh;
+  }
+
+  .map-section__flag {
+    top: 45%;
+
+    /* width: 50%; */
+  }
+
+  .map-section__flag div {
+    position: absolute;
+    left: 20vw !important;
+    /* max-width: 500px; */
+    width: 500px;
+    top: 5vh;
+    position: absolute;
+  }
+
   .location-section__jeanne {
     margin-left: 80px;
     margin-top: 80px;
@@ -2552,6 +2575,29 @@ footer img {
     padding-bottom: 10%;
   }
 
+  .map-section__flag img {
+    /* margin-right: 5%; */
+    width: 7vw !important;
+    /* bottom: 10%; */
+    padding-left: 4vw;
+    padding-top: 25vh;
+  }
+
+  .map-section__flag {
+    top: 45%;
+
+    /* width: 50%; */
+  }
+
+  .map-section__flag div {
+    position: absolute;
+    left: 20vw !important;
+    /* max-width: 500px; */
+    width: 500px;
+    top: 5vh;
+    position: absolute;
+  }
+
   .jobs {
     margin-top: 35%;
     font-size: 4.5rem;
@@ -2634,6 +2680,29 @@ footer img {
 @media (min-width: 1600px) {
   .location-section__jeanne-married {
     top: 62vh;
+  }
+
+  .map-section__flag img {
+    /* margin-right: 5%; */
+    width: 6vw !important;
+    /* bottom: 10%; */
+    padding-left: 4vw;
+    padding-top: 27vh;
+  }
+
+  .map-section__flag {
+    top: 45%;
+
+    /* width: 50%; */
+  }
+
+  .map-section__flag div {
+    position: absolute;
+    left: 16vw !important;
+    /* max-width: 500px; */
+    width: 500px;
+    top: 5vh;
+    position: absolute;
   }
 
   .location-section__container {
@@ -2745,6 +2814,29 @@ footer img {
     margin-top: 56px;
   }
 
+  .map-section__flag img {
+    /* margin-right: 5%; */
+    width: 6vw !important;
+    /* bottom: 10%; */
+    padding-left: 3vw;
+    padding-top: 25vh;
+  }
+
+  .map-section__flag {
+    top: 45%;
+
+    /* width: 50%; */
+  }
+
+  .map-section__flag div {
+    position: absolute;
+    left: 16vw !important;
+    /* max-width: 500px; */
+    width: 500px;
+    top: 5vh;
+    position: absolute;
+  }
+
   .location-section__frame__name-alexander {
 
     font-size: 5rem !important;
@@ -2783,6 +2875,7 @@ footer img {
     text-align: center;
 
   }
+
   .dark-background {
     height: 220vh;
   }

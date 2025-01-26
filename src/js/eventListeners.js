@@ -9,20 +9,24 @@ let startpositie;
 let intervalpositie;
 
 if (mediaQuery__sm.matches) {
-  startpositie = "-55vw";
-  intervalpositie = "-58vw";
+  startpositie = "21vw";
+  intervalpositie = "18vw";
 }
 if (mediaQuery__md.matches) {
-  startpositie = "-42vw";
-  intervalpositie = "-46vw";
+  startpositie = "17vw";
+  intervalpositie = "14vw";
 }
 if (mediaQuery__lg.matches) {
-  startpositie = "-37vw";
-  intervalpositie = "-40vw";
+  startpositie = "15vw";
+  intervalpositie = "12vw";
 }
 if (mediaQuery__xl.matches) {
-  startpositie = "-34vw";
-  intervalpositie = "-37vw";
+  startpositie = "13vw";
+  intervalpositie = "10vw";
+}
+if (mediaQuery__xxl.matches) {
+  startpositie = "11vw";
+  intervalpositie = "9vw";
 }
 // Variabele om het interval op te slaan
 let animationInterval = setInterval(() => {
@@ -43,7 +47,7 @@ let animationInterval = setInterval(() => {
       }
     );
   });
-}, 8000);
+}, 2000);
 
 function eventListener() {
   console.log("--------");
@@ -73,7 +77,7 @@ function eventListener() {
         // Als de knop al is verplaatst, breng het dan terug naar de originele positie
         gsap.fromTo(
           flag,
-          { right: "0" }, // Startpositie als het al verplaatst is
+          { right: "800px" }, // Startpositie als het al verplaatst is
           { right: intervalpositie, duration: 0.5, ease: "sine.inOut" }
         );
       } else {
@@ -81,7 +85,7 @@ function eventListener() {
         gsap.fromTo(
           flag,
           { right: startpositie }, // Startpositie
-          { right: "0%", duration: 0.5, ease: "sine.inOut" }
+          { right: "800px", duration: 0.5, ease: "sine.inOut" }
         );
       }
 
