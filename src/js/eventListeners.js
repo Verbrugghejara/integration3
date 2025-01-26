@@ -93,6 +93,7 @@ function eventListener() {
   const arrows = document.querySelectorAll(".arrow");
   // Maak de wiggle animatie met GSAP
   arrows.forEach((arrow) => {
+    console.log("click");
     // Genereer willekeurige waarden voor de animatie
     arrow.addEventListener("click", () => {
       // Toepassen van GSAP animatie
@@ -108,23 +109,32 @@ function eventListener() {
   });
 }
 function printerLever() {
-const lever = document.querySelector(".location-section__printer--lever");
-console.log(lever);
-lever.addEventListener("click", () => {
-  console.log("xlixk");
-  gsap.to(".location-section__printer--lever", {
-    rotate: 30, // Roteer de afbeelding
-    duration: 0.5,
-    yoyo: true, // Keer terug naar oorspronkelijke positie
-    repeat: 1, // Herhaal eenmaal
+  const lever = document.querySelector(".location-section__printer--lever");
+  console.log(lever);
+  lever.addEventListener("click", () => {
+    gsap.to(".location-section__printer--lever", {
+      rotate: 30, // Roteer de afbeelding
+      duration: 0.5,
+      yoyo: true, // Keer terug naar oorspronkelijke positie
+      repeat: 1, // Herhaal eenmaal
+    });
+    gsap.to(`.location-section__printer__rectangle__name h2`, {
+      transform: "rotateY(0)",
+      delay: 0.5,
+      duration: 1,
+      ease: "back.in",
+    });
   });
-  gsap.to(`.location-section__printer__rectangle__name h2`, {
-    transform: "rotateY(0)",
-    delay: 0.5,
-    duration: 1,
-    ease: "back.in",
+  const button = document.querySelector(".location-section__printer--button");
+  console.log(button);
+  button.addEventListener("click", () => {
+    gsap.to(`.location-section__printer__rectangle__name h2`, {
+      transform: "rotateY(0)",
+      delay: 0.5,
+      duration: 1,
+      ease: "back.in",
+    });
   });
-});
 }
 console.log("weeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeerk");
 // printerLever();

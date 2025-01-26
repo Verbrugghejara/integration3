@@ -39,7 +39,7 @@ function addMarkers() {
       if (lastClickedMarker !== null && lastClickedMarker !== markerElement) {
         lastClickedMarker.src = `${marker.image}.png`; // Zet de vorige marker terug naar normaal
       }
-
+      nameCleared();
       markerElement.src = `${marker.image}Rood.png`;
       console.log(lastClickedMarker);
       lastClickedMarker = markerElement;
@@ -63,8 +63,8 @@ function addMarkers() {
       } else if (marker.locatie == "Leiden") {
         locationLeiden();
       }
-      console.log(markerElement.src);
 
+      nameCleared();
       eventListener();
     });
     markerElement.addEventListener("mouseover", () => {
@@ -154,13 +154,14 @@ function locationAntwerp() {
           </svg>
 
         </div>
-        <!-- <button class="location-section__printer--lever"> -->
-        <img class="location-section__printer--lever" src="/assets/lever.png" alt="Printer Lever">
-        <!-- </button> -->
+        <img class="location-section__printer--lever only-desktop" src="/assets/lever.png" alt="Printer Lever">
+        <button class="location-section__printer--button only-mobile">
+        Push
+        </button>
       </div>
     </div>
     <div class="container">
-      <h2 class="highlight mb-md text-center">1555</h2>
+      <h2 class="highlight mb-sm text-center">1555</h2>
       <p class="text-center mb-lg">He built his <span class="highlight">business</span> into the largest typographical
         enterprise of the late
         <span class="highlight">16th century</span>, with support from the
@@ -388,13 +389,13 @@ function locationAntwerp() {
 }
 function locationParis() {
   const html = ` 
-  <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-    stroke-linejoin="round" class="lucide lucide-arrow-up">
-    <path d="m5 12 7-7 7 7" />
-    <path d="M12 19V5" />
-  </svg>
-      <h2 class=" justify-center location-name" >Paris</h2>
+      <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="lucide lucide-arrow-up">
+      <path d="m5 12 7-7 7 7" />
+      <path d="M12 19V5" />
+    </svg>
+    <h2 class=" justify-center location-name">Paris</h2>
     <div class="location-section__roman container">
       <div class="location-section__roman__sequence only-desktop">
         <h2 class="highlight mb-sm">The second half of the 16th century</h2>
@@ -470,7 +471,7 @@ function locationParis() {
           </p>
         </div>
 
-        <img src="/assets/magnifyGlass.png" alt="Magnify Glass">
+        <img class="only-desktop" src="/assets/magnifyGlass.png" alt="Magnify Glass">
 
       </div>
       <div class="location-section__raid__pamphlet">
@@ -488,36 +489,47 @@ function locationParis() {
           class="highlight">cleared</span>.</p>
       <p class="cleared highlight">Plantin</p>
       <!-- <div class="masked-text">
-        <img class="background" src="/assets/dirty.png" alt="Dirty Background">
-        <span class="text-mask">Plantin</span>
-      </div> -->
+          <img class="background" src="/assets/dirty.png" alt="Dirty Background">
+          <span class="text-mask">Plantin</span>
+        </div> -->
     </div>
     <div class="location-section__paris container mb-lg">
       <div class="location-section__paris-path">
         <p>
-        He made his way back to Antwerp, only to discover that during his absence, all of his cherished furniture had been sold off to the public.
+          He made his way back to Antwerp, only to discover that during his absence, all of his cherished furniture
+          had
+          been sold off to the public.
         </p>
         <p class="location-paris">
-        Paris
+          Paris
         </p>
-        <p class="location-antwerp">
-        Antwerp
-        </p>
-        <svg width="1105" height="787" viewBox="0 0 1105 787" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path id="motionPath" d="M1 2C98.51 27.16 196.45 54.11 286.12 99.96C375.78 145.81 457.59 212.3 505.77 300.74C525.53 337.02 539.02 382.59 518.78 418.61C499.64 452.66 454.67 465.99 416.6 457.29C368.54 446.31 329.65 403.92 321.4 355.32C313.15 306.71 335.21 254.6 374.98 225.46C414.76 196.33 470.19 190.81 515.54 210.15C563.7 230.69 597.5 275.14 622.06 321.37C646.62 367.6 664.35 417.52 692.77 461.5C740.85 535.92 815.85 588.04 888.89 638.18C960.24 687.17 1031.59 736.15 1102.95 785.14" stroke="black" stroke-width="4" stroke-miterlimit="10"/>
+        <svg class="only-desktop" width="1105" height="787" viewBox="0 0 1105 787" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path id="motionPath"
+        d="M1 2C98.51 27.16 196.45 54.11 286.12 99.96C375.78 145.81 457.59 212.3 505.77 300.74C525.53 337.02 539.02 382.59 518.78 418.61C499.64 452.66 454.67 465.99 416.6 457.29C368.54 446.31 329.65 403.92 321.4 355.32C313.15 306.71 335.21 254.6 374.98 225.46C414.76 196.33 470.19 190.81 515.54 210.15C563.7 230.69 597.5 275.14 622.06 321.37C646.62 367.6 664.35 417.52 692.77 461.5C740.85 535.92 815.85 588.04 888.89 638.18C960.24 687.17 1031.59 736.15 1102.95 785.14"
+        stroke="black" stroke-width="4" stroke-miterlimit="10" />
         </svg>
+        <svg class="only-mobile" width="196" height="533" viewBox="0 0 196 533" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1.36035 1.3501C49.4804 50.0601 89.2403 107.02 118.38 168.98C125.41 183.92 131.9 199.47 133.35 215.92C134.8 232.37 130.51 250.04 118.62 261.49C105.47 274.16 85.6004 277.08 67.4004 275.55C42.1004 273.42 14.7004 260.95 7.08035 236.73C2.09035 220.88 7.04035 202.9 17.6804 190.14C28.3204 177.38 44.0004 169.51 60.2304 166C97.6703 157.9 139.18 173.37 162.19 203.99C181.44 229.61 187.38 262.66 190.62 294.54C198.7 373.97 193.49 454.74 175.27 532.47" stroke="#191923" stroke-width="2" stroke-miterlimit="10"/>
+        </svg>
+        <p class="location-antwerp">
+          Antwerp
+        </p>
+
         <img class="sold" src="/assets/sold.png" alt="sold stamp">
-        
+
       </div>
 
     </div>
     <div class="location-section__partners">
-      <p class=" container" class="text-center">It seemed that the creditors and wholesale <span class="highlight">buyers were
+      <p class=" container" class="text-center">It seemed that the creditors and wholesale <span
+          class="highlight">buyers
+          were
           friends</span> of Plantin. Through their support, he managed to prevent
-        the government from <span class="highlight">seizing</span> his property. In time, these allies became his <span
-          class="highlight">trusted partners</span>.</p>
-          
-        <img class="shaking--hands" src="/assets/shakingHands.png" alt="Shaking hands">
+        the government from <span class="highlight">seizing</span> his property. In time, these allies became his
+        <span class="highlight">trusted partners</span>.
+      </p>
+
+      <img class="shaking--hands" src="/assets/shakingHands.png" alt="Shaking hands">
 
     </div>
 `;
@@ -727,7 +739,7 @@ function locationLeiden() {
       <path d="m5 12 7-7 7 7" />
       <path d="M12 19V5" />
     </svg>
-    <h2 class=" justify-center location-name">Leiden</h2>
+    <h2 class=" justify-center location-name container">Leiden</h2>
     <div id="alexander" class="location-section__frame ">
       <p class="location-section__frame__background">Alexander <br> Farnese</p>
       <div class="location-section__frame__image">
@@ -735,7 +747,7 @@ function locationLeiden() {
         <img class="location-section__frame__image__img-groot" src="/assets/alexanderGroot.png" alt="">
         <h2 class="location-section__frame__name-alexander">Alexander <br> Farnese</h2>
       </div>
-      <div class="location-section__rectangle__info">
+      <div class="location-section__rectangle__info container">
         <h2 class="mb-sm highlight">1582</h2>
         <p>After the fall of Lier, when the Spanish governor-general Alexander Farnese launched the siege of Antwerp,
           Plantin
@@ -753,7 +765,7 @@ function locationLeiden() {
         <img class="location-section__frame__image__img-groot" src="/assets/justusGroot.png" alt="">
         <h2 class="location-section__frame__name-justus">Justus <br> Lipsius</h2>
       </div>
-      <div class="location-section__rectangle__info">
+      <div class="location-section__rectangle__info container">
         <!-- <h2 class="mb-sm highlight">1582</h2> -->
         <p>In Leiden, the newly founded university had created new sales opportunities. On the recommendation of the great humanist
         Justus Lipsius, Plantin was appointed as university printer. He established the first scientific publishing house and
