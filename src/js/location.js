@@ -138,7 +138,7 @@ function locationAntwerp() {
       <p class="mb-md">He became a burgher of the city, securing his place in its community. With his footing steady, he
         set his
         sights on a
-        new ambition, a path that would soon define his <span class="highlight">legacy</span>. <br> By becoming a ...
+        new ambition, a path that would soon define his <span class="highlight">legacy</span>. By becoming a ...
       </p>
       <div class="location-section__printer__rectangle">
         <div class="location-section__printer__rectangle__svg ">
@@ -216,7 +216,8 @@ function locationAntwerp() {
           </p>
         </div>
       </div>
-      <p>
+      <div class="museum-info">
+      <p >
         The logo has been <span class="highlight">modernized</span>, but the <span class="highlight">authentic</span>
         version still remains proudly displayed within the <span class="highlight">building</span>. If
         you're
@@ -226,6 +227,7 @@ function locationAntwerp() {
       <div class="location-section__printer__button-container">
         
       <button class="buyTicketButton">Buy a ticket</button>
+      </div>
       </div>
     </div>
     <div class="location-section__bijbel container">
