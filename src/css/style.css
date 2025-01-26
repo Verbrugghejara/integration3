@@ -2650,12 +2650,20 @@ footer img {
     left: 26.5vw;
   }
 
+  .location-section__birth--info p {
+    font-size: 2rem;
+  }
+
+  .location-section__birth--info h2 {
+    font-size: 3rem !important;
+  }
+
   .location-section__jeanne-married {
     transform: rotate(0deg);
     top: 25%;
   }
 
-  .married-image img{
+  .married-image img {
     padding-left: 32px;
     padding-right: 32px;
   }
