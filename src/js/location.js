@@ -427,7 +427,7 @@ function locationParis() {
           </svg>
         </div>
       </div>
-      <div class="only-mobile">
+      <div class="only-mobile justify-center">
         <p class="mb-md">The second half of the <span class="highlight">16th century</span> was a challenging
           period for
           writers and printer-publishers. Religious

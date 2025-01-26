@@ -1342,6 +1342,53 @@ footer img {
     font-size: 4rem;
   }
 
+  .location-section__raid__pamphlet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    position: relative;
+    margin-top: 32px;
+  }
+
+  .location-section__raid__pamphlet img {
+    /* width: 500px !important; */
+    width: 60% !important;
+    height: auto;
+  }
+
+  .location-section__raid__pamphlet div {
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    left: 28%;
+    top: 20%;
+  }
+
+  .location-section__paris-path p {
+    top: 1vh;
+    z-index: 100;
+  }
+
+  .location-section__paris-path svg {
+    width: 40%;
+    padding-left: 30vw;
+    rotate: -10deg;
+  }
+
+  .location-antwerp {
+    margin-top: -30px !important;
+  }
+
+  .sold {
+    top: 30vh !important;
+    width: 100%;
+  }
+
+  .location-section__partners p {
+    margin-bottom: -90px;
+  }
+
   .header__intro h2:nth-child(2) {
     display: block;
     left: 18%;
@@ -1653,6 +1700,10 @@ footer img {
 
   }
 
+  .shaking--hands {
+    margin-bottom: 32px;
+  }
+
   .location-section__bijbel {
     /* display: block; */
     flex-direction: row;
@@ -1788,13 +1839,6 @@ footer img {
   .location-section__paris-path {
     position: sticky !important;
     top: 3vh;
-    /* position: relative !important; */
-    /* Alles binnen deze container blijft sticky */
-    /* top: 10vh; */
-    /* Beginpunt van sticky positie */
-    /* display: flex;
-    flex-direction: column;
-    align-items: center; */
   }
 
   .location-paris {
