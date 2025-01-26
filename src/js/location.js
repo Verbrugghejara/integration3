@@ -776,15 +776,15 @@ function locationLeiden() {
   scrollToLocation();
 }
 function locationAvertin() {
-  const html = `  <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-      class="lucide lucide-arrow-up">
-      <path d="m5 12 7-7 7 7" />
-      <path d="M12 19V5" />
-    </svg>
+  const html = `  
     <h2 class=" justify-center location-name">Saint-Avertin</h2>
     <div class="location-section__birth">
-    <div class="location-section__birth--sticky">
+    <div class="only-mobile container">
+    <h2 class="highlight">1520</h2>
+    <p>Here he was born around 1520</p>
+    <img class="location-section__storkBaby--image" src="/assets/storkBaby.png" alt="">
+    </div>
+    <div class="location-section__birth--sticky only-desktop">
       <div class="location-section__storkBaby">
         <img class="location-section__stork--image" src="/assets/stork.png" alt="">
         <img class="location-section__baby--image" src="/assets/baby.png" alt="">

@@ -877,6 +877,10 @@ p {
 
 }
 
+.location-section__storkBaby--image {
+  width: 90vw;
+}
+
 #motionSvg {
   position: fixed;
   top: 50%;
@@ -893,7 +897,7 @@ p {
 
 .location-section__birth {
   position: relative;
-  height: 300vh;
+  height: 100vh;
 }
 
 .location-section__birth--sticky {
@@ -1718,6 +1722,11 @@ footer img {
     /* Container voor sticky elementen */
     /* Zorgt ervoor dat er ruimte is voor de animatie */
     height: 400vh;
+  }
+
+  .location-section__birth {
+    position: relative;
+    height: 300vh;
   }
 
   .location-section__paris-path {
