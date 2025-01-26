@@ -2650,6 +2650,16 @@ footer img {
     left: 26.5vw;
   }
 
+  .location-section__jeanne-married {
+    transform: rotate(0deg);
+    top: 25%;
+  }
+
+  .married-image img{
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
   .museum-info {
     max-width: 600px;
     margin-left: 25.5vw;
