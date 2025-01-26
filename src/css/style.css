@@ -1389,6 +1389,7 @@ footer img {
     margin-bottom: -90px;
   }
 
+
   .header__intro h2:nth-child(2) {
     display: block;
     left: 18%;
@@ -1451,7 +1452,7 @@ footer img {
 
   .location-section__container {
     /* margin-top: 32px; */
-    margin-bottom: 225px;
+    margin-bottom: 64px;
     /* display: flex;*/
     /* align-items: center;  */
     gap: 16px;
@@ -1544,17 +1545,25 @@ footer img {
   }
 
   .location-section__jeanne-content {
-    margin-right: 32px;
+    display: flex;
+    position: relative;
+    margin-top: 16px;
+    padding: 0 !important;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .location-section__jeanne-married {
-    justify-content: space-between;
+    /* justify-content: space-between; */
     /* align-items: ; */
     /* display: flex; */
     /* align-items: stretch; */
     /* gap: 1rem; */
-    transform: rotate(90deg);
-    /* transform-origin: right; */
+    /* transform: rotate(90deg); */
+    position: absolute;
+    right: 17vh !important;
+    transform-origin: right;
+    top: 50vh;
     /* margin-right: -92px; */
     /* align-content: flex-end; */
     /* margin-left: -15%; */
@@ -1591,7 +1600,9 @@ footer img {
 
   .location-section__rectangle {
     display: flex;
+    flex-direction: row-reverse;
     gap: 32px;
+    /* align-items: center; */
     /* margin-left: 32px;
     margin-right: 32px; */
     /* width: 100%; */
@@ -1635,24 +1646,19 @@ footer img {
     display: flex;
     flex-direction: row;
     gap: 32px;
+    padding-left: 0 !important;
   }
 
   .location-section__frame__name-martina {
-    text-align: center;
-    color: #FFF6E7;
-    position: absolute;
-    bottom: 64px !important;
-    left: 5vh;
+    bottom: 24px !important;
+    left: 20px;
     font-size: 3.5rem !important;
   }
 
   .location-section__frame__magdalena {
-    text-align: center;
-    color: #FFF6E7;
-    position: absolute;
-    bottom: 64px;
-    right: 15px;
-    font-size: 3.25rem !important;
+    bottom: 24px;
+    left: 20px;
+    font-size: 3rem !important;
   }
 
   .location-section__frame__name-alexander {
