@@ -2770,7 +2770,17 @@ footer img {
   .location-section__printer__rectangle {
     align-items: start !important;
   }
+
   .location-section__bijbel {
     margin-top: 64px;
+  }
+
+  .cleared {
+    font-size: 14rem;
+  }
+
+  .location-section__cleared p:nth-child(1) {
+    text-align: center;
+
   }
 }
