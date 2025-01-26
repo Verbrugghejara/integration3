@@ -57,14 +57,14 @@ if (mediaQuery.matches) {
     .timeline({
       scrollTrigger: {
         trigger: ".header__container",
-        // markers: { fontSize: "25px", fontWeight: "bold" }, // Visualiseer de start- en eindmarkers
+        markers: { fontSize: "25px", fontWeight: "bold" }, // Visualiseer de start- en eindmarkers
         start: "top 9%",
         end: "top -10vh",
         scrub: true,
       },
     })
     .to(".header__container", {
-      height: "80vh",
+      height: "640px",
       ease: "circ",
     });
 

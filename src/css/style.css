@@ -1021,6 +1021,7 @@ p {
   transform-origin: left center;
   rotate: -40deg;
   cursor: pointer;
+  top: 30%;
 }
 
 .location-section__printer--button {
@@ -1269,7 +1270,7 @@ footer img {
 
 @media (min-width: 768px) {
   .only-desktop {
-    display: block;
+    display: block !important;
   }
 
   button {
@@ -1736,17 +1737,12 @@ footer img {
     border: 4px solid #FFF6E7 !important;
   }
 
-  .header__container {
-    /* height: 68vh; */
-    max-width: 50vh;
-    height: 65vh;
-
-  }
 
   .map-section__location {
     /* font-weight: 300; */
-    bottom: 15vh;
-    left: -5vh;
+    bottom: 16%;
+    left: -32px;
+    font-size: 2.5rem;
   }
 
   .location-section__rectangle__svg {
@@ -1759,29 +1755,40 @@ footer img {
     display: block;
   }
 
+  .header__container {
+    /* height: 68vh; */
+    max-width: 400px;
+    /* height: 65vh; */
+    height: 530px;
+
+  }
+
   .header__image {
     position: absolute;
+    /* width: 40vw; */
     /* Absolute voor animatie */
     left: 8px;
   }
 
   .header__image--top {
     top: 8px;
-    max-width: 50vh;
-    height: 45vh !important;
+    /* max-width: 50vh; */
+    height: 370px !important;
+    max-width: 400px;
     /* Startpositie */
   }
 
   .header__image--bottom {
     bottom: 8px;
-    max-width: 50vh;
-    height: 20vh !important;
+    /* max-width: 50vh; */
+    height: 160px !important;
+    max-width: 400px;
     /* Startpositie */
   }
 
   .header__text {
     position: relative;
-    margin-top: 46vh;
+    margin-top: 380px;
     font-size: 0.95rem;
     z-index: -1;
   }
@@ -1799,15 +1806,27 @@ footer img {
     width: 101px;
   }
 
+  .header__name {
+    position: absolute !important;
+    width: 150%;
+    left: -230px;
+  }
+
+  .header__intro {
+    position: relative;
+  }
+
   .header__intro h2 {
-    left: -1vh;
+    width: fit-content;
+    /* left: 300px; */
     z-index: 10;
   }
 
   .header__intro h2:nth-child(2) {
 
-    left: 1vh;
-    top: 24vh;
+    left: -170px;
+    width: 150%;
+    top: 22px;
 
   }
 
@@ -1826,14 +1845,44 @@ footer img {
     justify-content: center;
   }
 
+  .location-section__newlife--sticky {
+    height: fit-content;
+    top: 3vh;
+  }
+
+  .location-secton__newlife--animation img {
+    width: 25%;
+    left: 35%;
+    bottom: 27%;
+  }
+
+
+  .location-section__newlife--hammer {
+    padding-left: 8%;
+    padding-bottom: 10%;
+  }
+
+  .jobs {
+    margin-top: 25%;
+  }
+
+  .location-section__workshop__tampon {
+    display: flex !important;
+    gap: 80px;
+  }
+
+
+  .location-section__workshop__tampon img {
+    width: 20vh;
+    rotate: 30deg;
+  }
+
   .location-section__book {
     max-width: 300px;
   }
 
   .location-section__paris {
     position: relative;
-    /* Container voor sticky elementen */
-    /* Zorgt ervoor dat er ruimte is voor de animatie */
     height: 400vh;
   }
 
