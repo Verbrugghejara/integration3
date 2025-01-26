@@ -1842,7 +1842,7 @@ footer img {
   }
 
   .location-section__container {
-    justify-content: center;
+    justify-content: space-around;
   }
 
   .location-section__newlife--sticky {
@@ -2435,8 +2435,26 @@ footer img {
     margin-bottom: -150px;
   }
 
+  .location-section__book {
+    max-width: 400px;
+  }
+
   .shaking--hands {
     width: 100%;
+  }
+
+  .location-section__jeanne-family-info {
+    margin-top: 64px;
+  }
+
+  .dark-background {
+    height: 210vh;
+  }
+
+  .location-section__container p {
+    /* width: 150px; */
+    font-size: 2.75rem;
+    width: 400px;
   }
 
   .container {
@@ -2511,7 +2529,8 @@ footer img {
   }
 
   .location-section__container {
-    gap: 80px;
+    /* gap: 120px !important; */
+    justify-content: space-around !important;
     margin-top: 72px;
   }
 
