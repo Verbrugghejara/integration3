@@ -2575,9 +2575,9 @@ footer img {
     max-width: 450px;
   }
 
-  /* .dark-background {
-    height: 120vh;
-  } */
+  .dark-background {
+    height: 200vh;
+  }
 
   .location-section__jeanne-married {
     right: 23vh !important;
